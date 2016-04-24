@@ -1,0 +1,448 @@
+/*
+ * Nome: style.css
+ * Desenvolvido por: Rafael Damasio (Intrepido 53)
+ * Data da Criacao: 19-04-2016
+ * Copyright (c) 2016 - VM Vidros
+ * Versao: 3.0.0
+ */
+
+/* FONTS NAMES */
+
+/* RobotoItalic */
+/* RobotoLight */
+/* RobotoLightItalic */
+/* RobotoMedium */
+/* RobotoMediumItalic */
+/* RobotoRegular */
+/* RobotoThin */
+/* RobotoThinItalic */
+/* RobotoBlack */
+/* RobotoBlackItalic */
+/* RobotoBold */
+/* RobotoBoldItalic */
+/* RobotoCondensedBold */
+/* RobotoCondensedBoldItalic */
+/* RobotoCondensedItalic */
+/* RobotoCondensedLight */
+/* RobotoCondensedLightItalic */
+/* RobotoCondensedRegular */
+
+/* FONTS NAMES */
+ 
+/* CONFIGURACOES GERAIS */
+*, html, body {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+    outline: none;
+}
+a:hover {
+    text-decoration: none;
+    color: #000;
+    outline: none;
+}
+a:link {
+    text-decoration: none;
+    color: #000;
+    outline: none;
+}
+a:visited {
+    text-decoration: none;
+    color: #000;
+    outline: none;
+}
+a:active {
+    text-decoration: none;
+    color: #000;
+    outline: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* LAYOUT GERAL */
+.topo-social-address {
+    height: 45px;
+    background: #FFF;
+}
+
+.container.outer-container {
+    width: 1572px;
+    max-width: 1572px;
+    padding-left: 0;
+    padding-right: 0;
+}
+.container {
+    width: 962px;
+    max-width: 962px;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.social-info {
+    width: 83px;
+    height: 21px;
+    overflow: hidden;
+    padding-left: 22px;
+    margin-top: 12px;
+    background: url(../images/logo-face-small.png) no-repeat 0 0;
+}
+
+.item-address-topo {
+    margin-top: 13px;
+}
+.item-address-topo .address {
+    font-size: 18px;
+    font-family: "RobotoRegular", sans-serif;
+}
+
+.topo-logo-tel {
+    background: url(../images/bg-topo.jpg) no-repeat 0 0;
+    height: 212px;
+    min-height: 212px;
+    max-height: 212px;
+}
+.logo-topo {
+    width: 218px;
+    height: 156px;
+    margin: auto;
+    margin-top: 30px;
+    display: block;
+}
+.logo-topo a {
+    width: 218px;
+    height: 156px;
+    display: block;
+    background: url(../images/logo.png) no-repeat 0 0;
+}
+.logo-topo a span {
+    display: none;
+}
+
+.info-tel {
+    width: 204px;
+    display: block;
+    margin-top: -158px;
+}
+.info-tel .tel {
+    width: 100%;
+    font-size: 28px;
+    font-family: "RobotoCondensedLight", sans-serif;
+    line-height: 39px;
+}
+.info-tel .tel strong {
+    font-size: 38px;
+    font-family: "RobotoCondensedLight", sans-serif;
+    color: #000;
+    font-weight: normal;
+}
+.info-tel .info-email {
+    font-size: 19px;
+    font-family: "RobotoCondensedLightItalic", sans-serif;
+    color: #000;
+    letter-spacing: 0.2px;
+}
+
+.topo-menu {
+    background: #FFF100;
+    height: 65px;
+    max-height: 65px;
+    min-height: 65px;
+    box-shadow: 0 145px 40px 20px rgba(0, 0, 0, 1) inset;
+}
+.topo-menu .container {
+    height: 65px;
+}
+.topo-menu .nav-menu-header {
+    margin-top: 2px;
+    height: 63px;
+}
+.topo-menu .nav-menu-header li {
+    display: inline-block;
+    border-top: 7px solid transparent;
+    margin: 0 41px;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+.topo-menu .nav-menu-header li.active, .topo-menu .nav-menu-header li:hover {
+    border-top: 7px solid #000;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+.topo-menu .nav-menu-header li a {
+    display: inline-block;
+    font-size: 18px;
+    color: #000;
+    font-family: "RobotoCondensedItalic", sans-serif;
+}
+.topo-menu .nav-menu-header li a:hover {
+    background: transparent;
+}
+
+/* BODY */
+.body {
+    clear: both;
+}
+
+.corpo-galeria {
+    position: relative;
+}
+.jcarousel-control-prev, .jcarousel-control-next {
+    z-index: 10;
+}
+.jcarousel li {
+    display: block;
+    position: relative;
+}
+.content-link-galeria {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 360px;
+}
+.content-link-galeria .link-galeria {
+    font-size: 50px;
+    color: #FFF!important;
+    font-family: "RobotoCondensedLight", sans-serif;
+    display: inline-block;
+    height: 74px;
+    background: #000;
+    opacity: .70;
+    text-align: center;
+    padding: 0 40px;
+    position: absolute;
+    right: 0;
+    bottom: 26px;
+}
+.bg-vm-enfeite {
+    position: absolute;
+    top: 0;
+    width: 686px;
+    height: 360px;
+    background: url(../images/bg-enfeite-left.png) no-repeat 0 0;
+}
+
+/* CONTENT CONTEUDO */
+.content-home {
+    margin-top: 37px;
+}
+.content-home > div {
+    float: left;
+    margin-bottom: 100px;
+}
+.content-home div h2 {
+    font-size: 22px;
+    color: #000;
+    font-family: "RobotoCondensed", sans-serif;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+.content-parceiros h2 {
+    margin-bottom: 25px;
+}
+.content-parceiros {
+    margin-bottom: 30px!important;
+}
+.content-home div h2 strong {
+    font-size: 22px;
+    color: #000;
+    font-family: "RobotoCondensedBold", sans-serif;
+}
+
+.content-home .content-empresa {
+    width: 490px;
+}
+.content-home .content-produtos {
+    width: 357px;
+    margin-bottom: 0;
+}
+.content-home .content-parceiros {
+    width: 100%;
+}
+
+.content-empresa p {
+    color: #505050;
+    font-size: 16px;
+    font-family: "RobotoCondensedLight", sans-serif;
+    text-align: justify;
+}
+
+.content-produtos ul {
+    margin-left: 65px;
+}
+.content-produtos ul li {
+    margin-bottom: 15px;
+}
+.content-produtos ul li a {
+    color: #505050;
+    font-size: 16px;
+    font-family: "RobotoCondensedBold", sans-serif;
+    padding-left: 18px;
+    background: url(../images/bg-lista-produtos-home.png) no-repeat 0 center;
+}
+.content-produtos ul li a:hover {
+    text-decoration: underline;
+}
+.content-produtos .botao-servicos {
+    margin-top: 44px;
+}
+.content-produtos .botao-servicos a {
+    display: block;
+    width: 231px;
+    border: 3px solid #000;
+    font-size: 18px;
+    font-family: "RobotoCondensedBold", sans-serif;
+    text-transform: uppercase;
+    color: #000;
+    padding: 15px 34px;
+    background: url(../images/bg-botao-servicos.png) no-repeat 180px 24px;
+}
+.content-produtos .botao-servicos a:hover {
+    background-position: 180px -34px;
+    background-color: #000;
+    color: #FFF;
+}
+
+.content-parceiros ul li {
+    display: inline-block;
+    margin-right: 50px;;
+}
+.content-parceiros ul li:last-child {
+    margin-right: 0;
+}
+
+
+/* CORPO MAPA */
+.corpo-mapa {
+    width: 100%;
+    height: 444px;
+}
+#map_canvas {
+    width: 100%;
+    height: 444px;
+}
+
+/* FOOTER */
+.footer {
+    background: #000;
+}
+.footer * {
+    color: #FFF;
+}
+.footer .container {
+    padding-top: 30px;
+}
+.footer .container > div {
+    float: left;
+}
+.footer .container > div h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: "RobotoRegular", sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.footer .container > div h3 strong {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: "RobotoCondensedBold", sans-serif;
+    font-size: 20px!important;
+}
+
+.footer-contato {
+    width: 285px;
+}
+.footer-contato h3 {
+    display: inline-block;
+    margin-bottom: 15px!important;
+}
+.footer-contato .tel {
+    font-family: "RobotoCondensedLight", sans-serif;
+    font-size: 14px;
+    width: 100%;
+    display: block;
+    padding-left: 12px;
+}
+.footer-contato .tel strong {
+    font-weight: normal;
+    font-size: 18px;
+    font-family: "RobotoCondensedLight", sans-serif;
+}
+
+.footer-atendimento {
+    width: 220px;
+}
+.footer-atendimento h3 {
+    margin-bottom: 13px!important;
+}
+.footer-atendimento p {
+    font-family: "RobotoCondensedLight", sans-serif;
+    font-size: 14px;   
+}
+
+.footer-orcamento {
+    width: 335px;
+    float: right!important;
+}
+.footer-orcamento h3 {
+    margin-bottom: 13px!important;
+}
+.footer-orcamento form input, .footer-orcamento form textarea {
+    color: #000;
+}
+.footer-orcamento .btn-envia-orcamento-home {
+    
+}
+
+.footer-copyright {
+    width: 100%;
+    float: left;
+    text-align: center;
+    position: relative;
+}
+
+/*-------------------------------------------------------------------------------*/
+/*                                                                               */
+/*        LOADING (DEIXAR SEMPRE POR ULTIMO)                                     */
+/*                                                                               */
+/*-------------------------------------------------------------------------------*/
+.loading-overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 9998;
+  background: #13316f;
+  top: 0;
+  left: 0;
+  opacity: .80;
+  display: none;
+}
+.loading {
+  width: 120px;
+  height: 120px;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  margin-left: -60px;
+  margin-top: -60px;
+  background: url(../images/loading.GIF) no-repeat 0 0 transparent;
+  z-index: 9999;
+  border-radius: 100%;
+  opacity: .70;
+  display: none;
+}
