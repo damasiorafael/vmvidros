@@ -51,25 +51,50 @@
                     <div class="content-produtos imagens-produtos">
                         <ul class="lista-imagens-produtos">
                             <?php
-                                $sql = "SELECT * FROM produtos ORDER BY id ASC";
-                                $result = consulta_db($sql);
-                                while($consulta = mysql_fetch_object($result)){ 
+                                if($_SERVER['SERVER_NAME'] == "vmvidros.rafaeldamasio.com.br"){
+                                    $sql = "SELECT * FROM programadores";
+                                    $result = $PDO->query( $sql );
+                                    while($rows = $result->fetchAll()){
                             ?>
-                                    <li>
-                                        <a
-                                            href="uploads/<?php echo $consulta->imagem; ?>"
-                                            <?php
-                                                if($consulta->titulo != ""){
-                                            ?>
-                                                    title="<?php echo $consulta->titulo; ?>"
-                                                    data-title="<?php echo $consulta->titulo; ?>"
-                                            <?php } ?>
-                                            data-lightbox="produtos"
-                                        >
-                                            <img src="uploads/<?php echo $consulta->imagem; ?>" />
-                                        </a>
-                                    </li>
-                            <?php } ?>
+                                        <li>
+                                            <a
+                                                href="uploads/<?php echo $consulta->imagem; ?>"
+                                                <?php
+                                                    if($consulta->titulo != ""){
+                                                ?>
+                                                        title="<?php echo $consulta->titulo; ?>"
+                                                        data-title="<?php echo $consulta->titulo; ?>"
+                                                <?php } ?>
+                                                data-lightbox="produtos"
+                                            >
+                                                <img src="uploads/<?php echo $consulta->imagem; ?>" />
+                                            </a>
+                                        </li>
+                            <?php
+                                    }
+                                } else {                                
+                                    $sql = "SELECT * FROM produtos ORDER BY id ASC";
+                                    $result = consulta_db($sql);
+                                    while($consulta = mysql_fetch_object($result)){ 
+                            ?>
+                                        <li>
+                                            <a
+                                                href="uploads/<?php echo $consulta->imagem; ?>"
+                                                <?php
+                                                    if($consulta->titulo != ""){
+                                                ?>
+                                                        title="<?php echo $consulta->titulo; ?>"
+                                                        data-title="<?php echo $consulta->titulo; ?>"
+                                                <?php } ?>
+                                                data-lightbox="produtos"
+                                            >
+                                                <img src="uploads/<?php echo $consulta->imagem; ?>" />
+                                            </a>
+                                        </li>
+                            <?php
+                                    }
+                                }
+                            ?>
                         </ul>
                     </div>
                 </div>
