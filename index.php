@@ -30,25 +30,25 @@
                         <h2>Produtos <strong>& Serviços</strong></h2>
                         <ul class="lista-produtos-home">
                             <li>
-                                <a href="" title="Pisos elevados">Pisos elevados</a>
+                                <a title="Pisos elevados">Pisos elevados</a>
                             </li>
                             <li>
-                                <a href="" title="Sacadas">Sacadas</a>
+                                <a title="Sacadas">Sacadas</a>
                             </li>
                             <li>
-                                <a href="" title="Coberturas">Coberturas</a>
+                                <a title="Coberturas">Coberturas</a>
                             </li>
                             <li>
-                                <a href="" title="Box e espelhos">Box e espelhos</a>
+                                <a title="Box e espelhos">Box e espelhos</a>
                             </li>
                             <li>
-                                <a href="" title="Portas e Janelas">Portas e Janelas</a>
+                                <a title="Portas e Janelas">Portas e Janelas</a>
                             </li>
                             <li>
-                                <a href="" title="Guarda-corpo e corrimãos">Guarda-corpo e corrimãos</a>
+                                <a title="Guarda-corpo e corrimãos">Guarda-corpo e corrimãos</a>
                             </li>
                             <li>
-                                <a href="" title="Manutenção geral">Manutenção geral</a>
+                                <a title="Manutenção geral">Manutenção geral</a>
                             </li>
                         </ul>
                         <div class="botao-servicos pull-right">
