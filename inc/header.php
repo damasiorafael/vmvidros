@@ -3,19 +3,12 @@
             <div class="container outer-container">
                 <div class="item-facebook-top pull-left">
                     <div class="social-info">
-                        <div
-                                class="fb-like"
-                                data-href="https://www.facebook.com/Vidra%C3%A7aria-Millenium-331204567031522/"
-                                data-colorscheme="light"
-                                data-show-faces="false"
-                                data-header="false"
-                                data-stream="false"
-                                data-show-border="false"
-                                data-width="83"
-                                data-height="21"
-                                data-layout="standard"
-                                data-css="/css/style.css"
-                        ></div>
+                        <div class="fb-like" 
+                            data-href="https://www.facebook.com/Vidra%C3%A7aria-Millenium-331204567031522" 
+                            data-layout="standard" 
+                            data-action="like" 
+                            data-show-faces="false">
+                        </div>
                     </div>
                 </div>
                 <div class="item-address-topo pull-right">
@@ -34,16 +27,20 @@
                         </a>
                     </h1>
                 </div>
-                <div class="info-tel pull-right">
-                    <span class="tel tel-1">43. <strong>3337-1818</strong></span>
-                    <span class="tel tel-2">
-                        <?php if ($pag == "empresa") { ?>
-                            <span class="icon-whatsapp"></span>
-                        <?php } ?>
-                        43. <strong>9987-1818</strong>
-                    </span>
-                    <span class="info-email">contato@vmvidros.com.br</span>
-                </div>
+                <?php
+                    if($pag != "contato"){
+                ?>
+                        <div class="info-tel pull-right">
+                            <span class="tel tel-1">43. <strong>3337-1818</strong></span>
+                            <span class="tel tel-2">
+                                <?php if ($pag == "empresa") { ?>
+                                    <span class="icon-whatsapp"></span>
+                                <?php } ?>
+                                43. <strong>9987-1818</strong>
+                            </span>
+                            <span class="info-email">contato@vmvidros.com.br</span>
+                        </div>
+                <?php } ?>
             </div>
         </div>
         <div class="topo-menu">
@@ -55,14 +52,14 @@
                     <li <?php if($pag == "empresa"){ echo "class='active'";} ?>>
                         <a href="empresa.php" title="Empresa">Empresa</a>
                     </li>
-                    <li>
-                        <a href="" title="Produtos & Serviços">Produtos & Serviços</a>
+                    <li <?php if($pag == "produtos"){ echo "class='active'";} ?>>
+                        <a href="produtos.php" title="Produtos & Serviços">Produtos & Serviços</a>
                     </li>
-                    <li>
-                        <a href="" title="Orçamento">Orçamento</a>
+                    <li <?php if($pag == "orcamento"){ echo "class='active'";} ?>>
+                        <a href="orcamento.php" title="Orçamento">Orçamento</a>
                     </li>
-                    <li>
-                        <a href="" title="Contato">Contato</a>
+                    <li <?php if($pag == "contato"){ echo "class='active'";} ?>>
+                        <a href="contato.php" title="Contato">Contato</a>
                     </li>
                 </ul>
             </div>

@@ -52,7 +52,7 @@
                             </li>
                         </ul>
                         <div class="botao-servicos pull-right">
-                            <a href="">Nossos Serviços</a>
+                            <a href="produtos.php">Nossos Serviços</a>
                         </div>
                     </div>
                     <div class="content-parceiros">

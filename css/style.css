@@ -188,7 +188,7 @@ img {
 .topo-menu .nav-menu-header li {
     display: inline-block;
     border-top: 7px solid transparent;
-    margin: 0 33px;
+    margin: 0 32px;
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
     -ms-transition: all 0.2s ease-in-out;
@@ -207,8 +207,12 @@ img {
     display: inline-block;
     font-size: 18px;
     color: #000;
-    font-family: "RobotoCondensedItalic", sans-serif;
+    font-family: "RobotoCondensedLight", sans-serif;
     text-transform: uppercase;
+}
+.topo-menu .nav-menu-header li.active {
+    font-weight: bold;
+    font-style: italic;
 }
 .topo-menu .nav-menu-header li a:hover {
     background: transparent;
@@ -276,7 +280,7 @@ img {
 .content-home div h2 {
     font-size: 22px;
     color: #000;
-    font-family: "RobotoCondensed", sans-serif;
+    font-family: "RobotoCondensedLight", sans-serif;
     text-transform: uppercase;
     margin-top: 0;
     margin-bottom: 40px;
@@ -311,20 +315,20 @@ img {
     text-align: justify;
 }
 
-.content-produtos ul {
+.lista-produtos-home {
     margin-left: 65px;
 }
-.content-produtos ul li {
+.lista-produtos-home li {
     margin-bottom: 15px;
 }
-.content-produtos ul li a {
+.lista-produtos-home li a {
     color: #505050;
     font-size: 16px;
     font-family: "RobotoCondensedBold", sans-serif;
     padding-left: 18px;
     background: url(../images/bg-lista-produtos-home.png) no-repeat 0 center;
 }
-.content-produtos ul li a:hover {
+.lista-produtos-home ul li a:hover {
     text-decoration: underline;
 }
 .content-produtos .botao-servicos {
@@ -340,11 +344,21 @@ img {
     color: #000;
     padding: 15px 34px;
     background: url(../images/bg-botao-servicos.png) no-repeat 180px 24px;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 .content-produtos .botao-servicos a:hover {
     background-position: 180px -34px;
     background-color: #000;
     color: #FFF;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 
 .content-parceiros ul li {
@@ -384,7 +398,7 @@ img {
 .footer .container > div h3 {
     margin-top: 0;
     margin-bottom: 0;
-    font-family: "RobotoRegular", sans-serif;
+    font-family: "RobotoCondensedLight", sans-serif;
     font-size: 20px;
     text-transform: uppercase;
 }
@@ -448,21 +462,6 @@ img {
     height: 89px;
     margin-bottom: 6px;
     padding-top: 6px;
-}
-.footer-orcamento .btn-envia-orcamento-home {
-    font-family: "RobotoCondensedLight", sans-serif;
-    font-size: 14px;
-    color: #000;
-    width: 149px;
-    background: #FFF100;
-    text-transform: uppercase;
-    border-radius: 0;
-    border: 2px solid #FFF100;
-    padding-bottom: 8px;
-}
-.footer-orcamento .btn-envia-orcamento-home:hover {
-    background: #000;
-    color: #FFF100;
 }
 
 .footer-copyright {
@@ -537,6 +536,252 @@ body#empresa .content-produtos .botao-servicos a:hover {
     background-color: #FFF;
     color: #000;
 }
+/* PAGINA EMPRESA */
+
+
+/* PAGINA PRODUTOS */
+body#produtos .body {
+    padding-bottom: 55px;
+}
+.desc-produtos, .imagens-produtos {
+    width: 100%!important;
+}
+
+.desc-produtos {
+    margin-bottom: 0!important;
+}
+.desc-produtos p {
+    padding-left: 15px;
+    font-size: 16px;
+    line-height: 32px;
+}
+
+.lista-produtos-pag-produtos {
+    width: 445px;
+    margin-top: 40px;
+}
+
+.imagens-produtos {
+    margin-top: 45px;
+}
+.imagens-produtos ul {
+    width: 964px;
+    margin-left: 0;
+}
+.lista-imagens-produtos li {
+    display: inline-block;
+    margin-right: 21px;
+    margin-bottom: 22px;
+}
+.lista-imagens-produtos li a {
+    background: none;
+    padding: 0;
+    display: inline-block;
+    width: 210px;
+    height: 110px;
+    border: 5px solid #FFF;
+    box-shadow: 3px 3px 10px -4px rgba(0, 0, 0, 1);
+}
+.lista-imagens-produtos li a img {
+    width: 210px;
+    height: 110px;
+    max-width: 100%;
+    max-height: 100%;
+    display: inline-block;
+}
+/* PAGINA PRODUTOS */
+
+
+/* PAGINA ORCAMENTO */
+.pag-formularios {
+    width: 100%!important;
+    margin-bottom: 22px!important;
+}
+.pag-formularios h2 {
+    margin-bottom: 0!important;
+}
+.pag-formularios h4 {
+    margin: 0!important;
+    font-family: "RobotoCondensedLight", sans-serif;
+    color: #000;
+    font-size: 32px;
+}
+.pag-formularios h4 strong {
+    font-weight: normal;
+    font-family: "RobotoCondensedBold", sans-serif;
+}
+
+.form-envia {
+    margin-top: 45px;
+}
+.form-envia input, .form-envia select, .form-envia select *, .form-envia textarea, .form-envia button {
+    border-radius: 0;
+    border: 1px solid #CACACA;
+    background: #CACACA;
+    color: #040707!important;
+    font-family: "RobotoCondensedLight", sans-serif;
+    font-size: 20px;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+.form-control:focus {
+    border-color: #FFF100;
+    box-shadow: 0 1px 1px #FFF100 inset, 0 0 8px #FFF877;
+    background: #FFF;
+    border: 1px solid #FFF100;
+    outline: 0 none;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.form-envia textarea {
+    height: 165px;
+    margin-bottom: 25px;
+}
+
+.form-envia input, .form-envia select {
+    height: 50px;
+    margin-bottom: 25px;
+}
+
+::-webkit-input-placeholder {
+   color: #040707!important;
+   font-family: "RobotoCondensedLight", sans-serif;
+}
+:-moz-placeholder {
+   color: #040707!important;
+   font-family: "RobotoCondensedLight", sans-serif;
+}
+::-moz-placeholder {
+   color: #040707!important;
+   font-family: "RobotoCondensedLight", sans-serif;
+}
+:-ms-input-placeholder {  
+   color: #040707!important;
+   font-family: "RobotoCondensedLight", sans-serif;
+}
+
+.btn-envia-form {
+    background: rgba(0, 0, 0, 0) url("../images/bg-botao-servicos.png") no-repeat scroll 150px 24px!important;
+    border: 3px solid #000!important;
+    color: #000!important;
+    display: block!important;
+    font-family: "RobotoCondensedBold",sans-serif!important;
+    font-size: 18px!important;
+    padding: 15px 34px!important;
+    text-transform: uppercase!important;
+    transition: all 0.2s ease-in-out 0s!important;
+    width: 237px!important;
+}
+.btn-envia-form:hover {
+    background-position: 150px -34px!important;
+    background-color: #000!important;
+    border: 3px solid #000!important;
+    color: #FFF!important;
+}
+
+.group-menor {
+    width: 470px;
+    float: left;
+}
+.group-menor:nth-child(2n) {
+    width: 470px;
+    float: right;
+}
+
+.img-destaque {
+    height: 258px;
+    width: 100%;
+}
+
+.img-destaque-orcamento {
+    background: url(../images/img-pag-orcamento.png) no-repeat 0 0 #FC0;
+}
+
+.control-group {
+    margin-bottom: 0;
+}
+/* PAGINA ORCAMENTO */
+
+
+/* PAGINA CONTATO */
+body#contato .form-envia {
+    width: 470px;
+    float: left;
+}
+
+.itens-contato {
+    width: 460px;
+    float: right;
+    margin-top: 45px;
+}
+
+.item-contato-mapa {
+    height: 165px;
+}
+
+.item-contato-mapa #map_canvas {
+    height: 165px;
+}
+
+.item-contato-address {
+    clear: both;
+}
+.item-contato-address .item-address-topo {
+    padding-left: 20px;
+}
+.item-contato-address .info-tel {
+    margin-top: 0;
+    padding-left: 20px;
+    width: 225px;
+}
+.item-contato-address .info-tel span {
+    float: left;
+    text-align: left;
+}
+.item-contato-address .info-tel .tel strong {
+    line-height: 34px;
+}
+
+.img-destaque-contato {
+    background: url(../images/img-pag-contato.png) no-repeat 0 0;
+}
+/* PAGINA CONTATO */
+
+
+/* CONFIG BUTTON ENVIA ORCAMENTO FOOTER */
+.footer-orcamento .btn-envia-orcamento-home {
+    font-family: "RobotoCondensedLight", sans-serif!important;
+    font-size: 14px!important;
+    color: #000!important;
+    width: 149px!important;
+    background: #FFF100!important;
+    text-transform: uppercase!important;
+    border-radius: 0!important;
+    border: 2px solid #FFF100!important;
+    padding-bottom: 8px!important;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+.footer-orcamento .btn-envia-orcamento-home:hover {
+    background: #000!important;
+    color: #FFF100!important;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+/* CONFIG BUTTON ENVIA ORCAMENTO FOOTER */
 
 /*-------------------------------------------------------------------------------*/
 /*                                                                               */

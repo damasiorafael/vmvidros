@@ -20,7 +20,7 @@
                     <input type="text" name="nome" placeholder="NOME" required>
                     <input type="email" name="email" placeholder="E-MAIL" required>
                     <textarea name="mensagem" placeholder="MENSAGEM" required></textarea>
-                    <button type="submit" class="btn btn-default btn-envia-form btn-envia-orcamento-home pull-right">Enviar</submit>
+                    <button type="submit" class="btn btn-default btn-envia-orcamento-home pull-right">Enviar</submit>
                 </form>
             </div>
             
@@ -49,13 +49,18 @@
         <!-- jCarousel -->
         <script type="text/javascript" src="js/jquery.jcarousel.min.js"></script>
         <script type="text/javascript" src="js/jcarousel.responsive.js"></script>
+        
+        <!-- InputMask -->
+        <script src="js/input-mask/jquery.inputmask.js" type="text/javascript"></script>
+        <script src="js/input-mask/jquery.inputmask.date.extensions.js" type="text/javascript"></script>
+        <script src="js/input-mask/jquery.inputmask.extensions.js" type="text/javascript"></script>
 
         <!-- GOOGLE MAPS -->
         <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDfVpzxaQRLeD6z-r-RaEzNbRfD-c6aWmo&sensor=TRUE"></script>
         <script type="text/javascript">
             function initializeMaps() {
-                var myLatlng = new google.maps.LatLng(-23.391801,-51.430427);
-                var latlngAlpha = new google.maps.LatLng(-23.391801,-51.430427);
+                var myLatlng = new google.maps.LatLng(-23.3402024,-51.1372256);
+                var latlngAlpha = new google.maps.LatLng(-23.3402024,-51.1372256);
                 var mapOptions = {
                   zoom: 17,
                   center: myLatlng,

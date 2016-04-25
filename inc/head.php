@@ -23,12 +23,6 @@
         <meta name="msapplication-TileColor" content="#ffffff">
         <meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png">
         <meta name="theme-color" content="#ffffff">
-
-        <meta property="og:url"           content="https://www.facebook.com/Vidra%C3%A7aria-Millenium-331204567031522/" />
-        <meta property="og:type"          content="vmvidros" />
-        <meta property="og:title"         content="VM Vidros" />
-        <meta property="og:description"   content="VM Vidros" />
-        <meta property="og:image"         content="http://www.vmvidros.com.br/images/logo.png" />
             
         <!-- Bootstrap -->
         <link href="css/bootstrap.css" rel="stylesheet">

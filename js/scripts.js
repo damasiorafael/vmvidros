@@ -172,3 +172,6 @@ $(".form-contato").on("submit", function(){
 	chamaLoading();
 
 });
+
+initializeMaps();
+$("[data-mask]").inputmask();
