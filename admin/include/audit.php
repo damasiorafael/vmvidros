@@ -303,11 +303,11 @@ class AuditTrailTable
 	
 	function logValueEnable($table)
 	{
-		if($table=="produtos")
+		if($table=="users")
 		{
 			return false;
 		}
-		if($table=="users")
+		if($table=="produtos")
 		{
 			return false;
 		}
@@ -635,11 +635,11 @@ class AuditTrailFile
 	
 	function logValueEnable($table)
 	{
-		if($table=="produtos")
+		if($table=="users")
 		{
 			return false;
 		}
-		if($table=="users")
+		if($table=="produtos")
 		{
 			return false;
 		}

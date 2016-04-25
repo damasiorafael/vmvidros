@@ -435,13 +435,13 @@ $menuStyles = array();
 $tableCaptions = array();
 $tableCaptions["Portuguese(Brazil)"] = array();
 $tableCaptions["Portuguese(Brazil)"][""] = "";
-$tableCaptions["Portuguese(Brazil)"]["produtos"] = "Produtos";
 $tableCaptions["Portuguese(Brazil)"]["users"] = "Users";
 $tableCaptions["Portuguese(Brazil)"][""] = "";
+$tableCaptions["Portuguese(Brazil)"]["produtos"] = "Produtos";
 $tableCaptions[""] = array();
 $tableCaptions[""][""] = "";
-$tableCaptions[""]["produtos"] = "Produtos";
 $tableCaptions[""]["users"] = "Users";
+$tableCaptions[""]["produtos"] = "Produtos";
 
 
 $globalEvents = new class_GlobalEvents;

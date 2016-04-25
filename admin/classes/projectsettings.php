@@ -2262,10 +2262,10 @@ function GetTableURL($table = "")
 	global $strTableName, $projectTables;
 	if(!$table)
 		$table=$strTableName;
-	if("produtos" == $table) 
-		return "produtos";
 	if("users" == $table) 
 		return "users";
+	if("produtos" == $table) 
+		return "produtos";
 
 	return "";
 }
@@ -2276,10 +2276,10 @@ function GetTableByShort($shortTName = "")
 	global $projectTables;
 	if(!$shortTName)
 		return false;
-	if("produtos" == $shortTName) 
-		return "produtos";
 	if("users" == $shortTName) 
 		return "users";
+	if("produtos" == $shortTName) 
+		return "produtos";
 }
 
 //	A

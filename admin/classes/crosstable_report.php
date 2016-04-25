@@ -1262,9 +1262,9 @@ class CrossTableReport
 			return true;
 			
 		$isDB = false;
-		if("produtos" == $this->xml_array['tables'][0])
-			$isDB = true;
 		if("users" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("produtos" == $this->xml_array['tables'][0])
 			$isDB = true;
 		return $isDB;
 	}

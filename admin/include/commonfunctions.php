@@ -260,9 +260,9 @@ function checkTableName($shortTName, $type=false)
 	if (!$shortTName)
 		return false;
 	
-	if ("produtos" == $shortTName && ($type===false || ($type!==false && $type == 0)))
-		return true;
 	if ("users" == $shortTName && ($type===false || ($type!==false && $type == 0)))
+		return true;
+	if ("produtos" == $shortTName && ($type===false || ($type!==false && $type == 0)))
 		return true;
 	return false;
 }
@@ -313,8 +313,8 @@ function GetEmailField($table = "")
 function GetTablesList($pdfMode = false)
 {
 	$arr = array();
-		$arr[]="produtos";
 		$arr[]="users";
+		$arr[]="produtos";
 	return $arr;
 }
 
@@ -917,13 +917,13 @@ function GetUserPermissionsStatic( $table )
 	$extraPerm = $_SESSION["AccessLevel"] == ACCESS_LEVEL_ADMINGROUP ? 'M' : '';
 	$sUserGroup=@$_SESSION["GroupID"];
 //	default permissions	
-	if($table=="produtos")
+	if($table=="users")
 	{
 		// grant all by default
 		return "ADESPI".$extraPerm;	
 	}
 //	default permissions	
-	if($table=="users")
+	if($table=="produtos")
 	{
 		// grant all by default
 		return "ADESPI".$extraPerm;	
@@ -1031,9 +1031,8 @@ function SetAuthSessionData($pUsername, &$data, $fromFacebook, $password, &$page
 	$_SESSION["GroupID"] = "";
 
 
-		$_SESSION["OwnerID"] = $data["id"];
-	$_SESSION["_produtos_OwnerID"] = $data["id"];
-		$_SESSION["_users_OwnerID"] = $data["email"];
+		$_SESSION["OwnerID"] = $data["email"];
+	$_SESSION["_users_OwnerID"] = $data["email"];
 	if($globalEvents->exists("AfterSuccessfulLogin"))
 	{
 		$globalEvents->AfterSuccessfulLogin($pUsername != "Guest" ? $pUsername : "", $password, $data, $pageObject);
@@ -1084,12 +1083,6 @@ function CheckSecurity($strValue, $strAction, $table = "")
 	$strPerm = GetUserPermissions();
 	if( strpos($strPerm, "M") === false )
 	{
-		if($table=="produtos")
-		{
-			
-				if(!($pSet->getCaseSensitiveUsername((string)$_SESSION["_".$table."_OwnerID"])===$pSet->getCaseSensitiveUsername((string)$strValue)))
-				return false;
-		}
 		if($table=="users")
 		{
 			
@@ -1155,10 +1148,6 @@ function SecuritySQL($strAction, $table="", $strPerm="")
 
 	if( strpos($strPerm, "M") === false )
 	{
-		if($table=="produtos")
-		{
-				$ret = GetFullFieldName($pSet->getTableOwnerID(), $table, false)."=".make_db_value($pSet->getTableOwnerID(), $ownerid, "", "", $table);
-		}
 		if($table=="users")
 		{
 				$ret = GetFullFieldName($pSet->getTableOwnerID(), $table, false)."=".make_db_value($pSet->getTableOwnerID(), $ownerid, "", "", $table);

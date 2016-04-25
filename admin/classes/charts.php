@@ -437,9 +437,9 @@ class Chart
 		if( !$this->webchart )
 			return true;
 			
-		if("produtos" == $this->chrt_array['tables'][0])
-			return true;
 		if("users" == $this->chrt_array['tables'][0])
+			return true;
+		if("produtos" == $this->chrt_array['tables'][0])
 			return true;
 		return false;
 	}

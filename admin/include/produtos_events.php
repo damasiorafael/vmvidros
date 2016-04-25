@@ -104,8 +104,8 @@ return true;
 function BeforeEdit(&$values, $where, &$oldvalues, &$keys, &$message, $inline, &$pageObject)
 {
 
-		echo "";
-
+		
+echo "";
 // Place event code here.
 // Use "Add Action" button to add code snippets.
 

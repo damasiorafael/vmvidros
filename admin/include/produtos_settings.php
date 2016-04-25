@@ -8,7 +8,7 @@ $tdataprodutos = array();
 	$tdataprodutos[".truncateText"] = true;
 	$tdataprodutos[".NumberOfChars"] = 80; 
 	$tdataprodutos[".ShortName"] = "produtos";
-	$tdataprodutos[".OwnerID"] = "id";
+	$tdataprodutos[".OwnerID"] = "";
 	$tdataprodutos[".OriginalTable"] = "produtos";
 
 //	field labels
@@ -23,7 +23,7 @@ if(mlang_getcurrentlang()=="Portuguese(Brazil)")
 	$pageTitlesprodutos["Portuguese(Brazil)"] = array();
 	$fieldLabelsprodutos["Portuguese(Brazil)"]["id"] = "Id";
 	$fieldToolTipsprodutos["Portuguese(Brazil)"]["id"] = "";
-	$fieldLabelsprodutos["Portuguese(Brazil)"]["titulo"] = "Titulo";
+	$fieldLabelsprodutos["Portuguese(Brazil)"]["titulo"] = "Título";
 	$fieldToolTipsprodutos["Portuguese(Brazil)"]["titulo"] = "";
 	$fieldLabelsprodutos["Portuguese(Brazil)"]["imagem"] = "Imagem";
 	$fieldToolTipsprodutos["Portuguese(Brazil)"]["imagem"] = "";
@@ -37,6 +37,10 @@ if(mlang_getcurrentlang()=="")
 	$pageTitlesprodutos[""] = array();
 	$fieldLabelsprodutos[""]["id"] = "Id";
 	$fieldToolTipsprodutos[""]["id"] = "";
+	$fieldLabelsprodutos[""]["titulo"] = "Titulo";
+	$fieldToolTipsprodutos[""]["titulo"] = "";
+	$fieldLabelsprodutos[""]["imagem"] = "Imagem";
+	$fieldToolTipsprodutos[""]["imagem"] = "";
 	if (count($fieldToolTipsprodutos[""]))
 		$tdataprodutos[".isUseToolTips"] = true;
 }
@@ -47,9 +51,9 @@ if(mlang_getcurrentlang()=="")
 
 
 $tdataprodutos[".shortTableName"] = "produtos";
-$tdataprodutos[".nSecOptions"] = 1;
+$tdataprodutos[".nSecOptions"] = 0;
 $tdataprodutos[".recsPerRowList"] = 1;
-$tdataprodutos[".mainTableOwnerID"] = "id";
+$tdataprodutos[".mainTableOwnerID"] = "";
 $tdataprodutos[".moveNext"] = 1;
 $tdataprodutos[".nType"] = 0;
 
@@ -514,7 +518,7 @@ $tdataprodutos[".printFields"] = array();
 	
 				$fdata["FieldPermissions"] = true;
 	
-				$fdata["UploadFolder"] = "../uploads/";
+				$fdata["UploadFolder"] = "../uploads";
 		
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
@@ -524,9 +528,9 @@ $tdataprodutos[".printFields"] = array();
 		
 		
 				$vdata["ShowThumbnail"] = true;
-	$vdata["ThumbWidth"] = 210;
-	$vdata["ThumbHeight"] = 110;	
-			$vdata["ImageWidth"] = 0;
+	$vdata["ThumbWidth"] = 72;
+	$vdata["ThumbHeight"] = 72;	
+			$vdata["ImageWidth"] = 457;
 	$vdata["ImageHeight"] = 0;
 	
 		
@@ -556,11 +560,7 @@ $tdataprodutos[".printFields"] = array();
 		
 		
 		
-							$edata["acceptFileTypes"] = "bmp";
-						$edata["acceptFileTypes"] .= "|gif";
-						$edata["acceptFileTypes"] .= "|jpg";
-						$edata["acceptFileTypes"] .= "|png";
-		$edata["acceptFileTypes"] = "(".$edata["acceptFileTypes"].")$";
+			$edata["acceptFileTypes"] = ".+$";
 	
 		$edata["maxNumberOfFiles"] = 1;
 	

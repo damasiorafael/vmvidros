@@ -287,8 +287,8 @@ $data["connInfo"][4] = $sys_dbname;
 	protected function _setTablesConnectionIds()
 	{
 		$connectionsIds = array();
-		$connectionsIds["produtos"] = "vmvidros_at_localhost";
 		$connectionsIds["users"] = "vmvidros_at_localhost";
+		$connectionsIds["produtos"] = "vmvidros_at_localhost";
 		$this->_tablesConnectionIds = $connectionsIds;
 	}
 	
