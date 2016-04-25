@@ -5,41 +5,33 @@ session_start();
 error_reporting(E_ERROR);
 
 date_default_timezone_set("Brazil/East");
-//vmvidros.rafaeldamasio.com.br
+//vmvidros.rafaeldamasio.com.break
+
 if($_SERVER['SERVER_NAME'] == "localhost"){
-	$host 	= "localhost";
-	$user	= "root";
-	$pass	= "";
-	$bd		= "vmvidros";
+	define( 'MYSQL_HOST', 'localhost' );
+	define( 'MYSQL_USER', 'root' );
+	define( 'MYSQL_PASSWORD', '' );
+	define( 'MYSQL_DB_NAME', 'vmvidros' );
 } else if($_SERVER['SERVER_NAME'] == "vmvidros.rafaeldamasio.com.br"){
 	define( 'MYSQL_HOST', 'localhost' );
 	define( 'MYSQL_USER', 'vmvidrN3IbXYjvMZ' );
 	define( 'MYSQL_PASSWORD', 'cQJ2TxVFpIC3NUR' );
 	define( 'MYSQL_DB_NAME', 'vmvidros_rafaeldamasio_com_br' );
 } else {
-	$host 	= "";
-	$user	= "";
-	$pass	= "";
-	$bd		= "";
+	define( 'MYSQL_HOST', 'localhost' );
+	define( 'MYSQL_USER', 'root' );
+	define( 'MYSQL_PASSWORD', '' );
+	define( 'MYSQL_DB_NAME', 'vmvidros' );
 }
 
-if($_SERVER['SERVER_NAME'] == "vmvidros.rafaeldamasio.com.br"){
-	
-	try
-	{
-		$PDO = new PDO( 'mysql:host=' . MYSQL_HOST . ';dbname=' . MYSQL_DB_NAME, MYSQL_USER, MYSQL_PASSWORD );
-	}
-	catch ( PDOException $e )
-	{
-		echo 'Erro ao conectar com o MySQL: ' . $e->getMessage();
-	}
-
-} else {
-	$con = mysql_connect($host,$user,$pass);
-	$db = mysql_select_db($bd);
-
-	mysql_set_charset('utf8');
+try{
+	$PDO = new PDO( 'mysql:host=' . MYSQL_HOST . ';dbname=' . MYSQL_DB_NAME, MYSQL_USER, MYSQL_PASSWORD );
 }
+catch ( PDOException $e ){
+	echo 'Erro ao conectar com o MySQL: ' . $e->getMessage();
+}
+
+mysql_set_charset('utf8');
 
 function protecao($string){
 
