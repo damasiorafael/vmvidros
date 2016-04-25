@@ -1,6 +1,10 @@
 <?php
     include("inc/config.php");
     $pag = "produtos";
+    $categoria = "";
+    if(isset($_REQUEST["cat"])){
+        $categoria = $_REQUEST["cat"];
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,36 +26,26 @@
                         </p>
                         <div class="lista-produtos-pag-produtos">
                             <ul class="lista-produtos-home pull-left">
-                                <li>
-                                    <a title="Pisos elevados">Pisos elevados</a>
-                                </li>
-                                <li>
-                                    <a title="Sacadas">Sacadas</a>
-                                </li>
-                                <li>
-                                    <a title="Coberturas">Coberturas</a>
-                                </li>
-                                <li>
-                                    <a title="Box e espelhos">Box e espelhos</a>
-                                </li>
-                            </ul>
-                            <ul class="lista-produtos-home pull-right">
-                                <li>
-                                    <a title="Portas e Janelas">Portas e Janelas</a>
-                                </li>
-                                <li>
-                                    <a title="Guarda-corpo e corrimãos">Guarda-corpo e corrimãos</a>
-                                </li>
-                                <li>
-                                    <a title="Manutenção geral">Manutenção geral</a>
-                                </li>
+                                <?php
+                                    $sqlCats = "SELECT * FROM categorias ORDER BY id ASC";
+                                    $resultCats = $PDO->query($sqlCats);
+                                    while($consultaCats = $resultCats->fetch(PDO::FETCH_OBJ)){
+                                ?>
+                                        <li>
+                                            <a href="produtos.php?cat=<?php echo $consultaCats->id; ?>" title="<?php echo $consultaCats->titulo; ?>" <?php if($categoria != "" && $consultaCats->id == $categoria){ echo "class='active'"; } ?> ><?php echo $consultaCats->nome; ?></a>
+                                        </li>
+                                <?php } ?>
                             </ul>
                         </div>
                     </div>
                     <div class="content-produtos imagens-produtos">
                         <ul class="lista-imagens-produtos">
                             <?php
-                                $sql = "SELECT * FROM produtos ORDER BY id ASC";
+                                if($categoria != ""){
+                                    $sql = "SELECT * FROM produtos WHERE id_categoria = $categoria ORDER BY id ASC";
+                                } else {
+                                    $sql = "SELECT * FROM produtos ORDER BY id ASC";
+                                }
                                 $result = $PDO->query($sql);
                                 while($consulta = $result->fetch(PDO::FETCH_OBJ)){
                             ?>

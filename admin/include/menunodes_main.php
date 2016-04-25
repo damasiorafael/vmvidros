@@ -10,6 +10,21 @@ function getMenuNodes_main($menuNodesObject)
 	$menuNode["name"] = "";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
+	$menuNode["table"] = "categorias";
+	$menuNode["style"] = "";
+	$menuNode["params"] = "";
+	$menuNode["parent"] = "0";
+	$menuNode["nameType"] = "Text";
+	$menuNode["linkType"] = "Internal";
+	$menuNode["pageType"] = "List";//
+	$menuNode["openType"] = "None";
+	$menuNode["title"] = "Categorias";
+	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNode = array();
+	$menuNode["id"] = "2";
+	$menuNode["name"] = "";
+	$menuNode["href"] = "mypage.htm";
+	$menuNode["type"] = "Leaf";
 	$menuNode["table"] = "produtos";
 	$menuNode["style"] = "";
 	$menuNode["params"] = "";
@@ -21,8 +36,23 @@ function getMenuNodes_main($menuNodesObject)
 	$menuNode["title"] = "Produtos";
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
-	$menuNode["id"] = "2";
+	$menuNode["id"] = "3";
 	$menuNode["name"] = "";
+	$menuNode["href"] = "mypage.htm";
+	$menuNode["type"] = "Leaf";
+	$menuNode["table"] = "banners";
+	$menuNode["style"] = "";
+	$menuNode["params"] = "";
+	$menuNode["parent"] = "0";
+	$menuNode["nameType"] = "Text";
+	$menuNode["linkType"] = "Internal";
+	$menuNode["pageType"] = "List";//
+	$menuNode["openType"] = "None";
+	$menuNode["title"] = "Banners";
+	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNode = array();
+	$menuNode["id"] = "4";
+	$menuNode["name"] = "Usuário";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
 	$menuNode["table"] = "users";
@@ -33,7 +63,7 @@ function getMenuNodes_main($menuNodesObject)
 	$menuNode["linkType"] = "Internal";
 	$menuNode["pageType"] = "List";//
 	$menuNode["openType"] = "None";
-	$menuNode["title"] = "Users";
+	$menuNode["title"] = "Usuário";
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 }
 ?>

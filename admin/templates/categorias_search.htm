@@ -28,7 +28,7 @@
 <div class="rnr-c rnr-cv rnr-c-search">
 
 {BEGIN searchheader}
-<div  class="rnr-brickcontents style2 rnr-b-srchheader {$brickclass_srchheader}"><span>	<h1>{$pagetitlelabel produtos search}</h1>
+<div  class="rnr-brickcontents style2 rnr-b-srchheader {$brickclass_srchheader}"><span>	<h1>{$pagetitlelabel categorias search}</h1>
 </span></div>{END searchheader}
 
 
@@ -57,7 +57,7 @@
 	<tr class="{$fielddispclass_id}">
 	{BEGIN id_fieldblock}		
 	<td>
-		{$label produtos id}
+		{$label categorias id}
 	</td>
 	<td>
 		<input type="checkbox" {$id_notbox}>
@@ -73,62 +73,24 @@
 	</td>
 {END id_fieldblock}
 	</tr>
-	<tr class="{$fielddispclass_id_categoria}">
-	{BEGIN id_categoria_fieldblock}		
+	<tr class="{$fielddispclass_nome}">
+	{BEGIN nome_fieldblock}		
 	<td>
-		{$label produtos id_categoria}
+		{$label categorias nome}
 	</td>
 	<td>
-		<input type="checkbox" {$id_categoria_notbox}>
+		<input type="checkbox" {$nome_notbox}>
 	</td>
 	<td>
-		{$searchtype_id_categoria}
+		{$searchtype_nome}
 	</td>
 	<td>
-		{$id_categoria_editcontrol}&nbsp;
+		{$nome_editcontrol}&nbsp;
 	</td>
 	<td>
-		{$id_categoria_editcontrol1}&nbsp;
+		{$nome_editcontrol1}&nbsp;
 	</td>
-{END id_categoria_fieldblock}
-	</tr>
-	<tr class="{$fielddispclass_titulo}">
-	{BEGIN titulo_fieldblock}		
-	<td>
-		{$label produtos titulo}
-	</td>
-	<td>
-		<input type="checkbox" {$titulo_notbox}>
-	</td>
-	<td>
-		{$searchtype_titulo}
-	</td>
-	<td>
-		{$titulo_editcontrol}&nbsp;
-	</td>
-	<td>
-		{$titulo_editcontrol1}&nbsp;
-	</td>
-{END titulo_fieldblock}
-	</tr>
-	<tr class="{$fielddispclass_imagem}">
-	{BEGIN imagem_fieldblock}		
-	<td>
-		{$label produtos imagem}
-	</td>
-	<td>
-		<input type="checkbox" {$imagem_notbox}>
-	</td>
-	<td>
-		{$searchtype_imagem}
-	</td>
-	<td>
-		{$imagem_editcontrol}&nbsp;
-	</td>
-	<td>
-		{$imagem_editcontrol1}&nbsp;
-	</td>
-{END imagem_fieldblock}
+{END nome_fieldblock}
 	</tr>
 
 </table></div>

@@ -47,6 +47,8 @@ function DBLookup($sql)
   */
 class tDAL
 {
+	var $tblvmvidros_at_localhost__banners;
+	var $tblvmvidros_at_localhost__categorias;
 	var $tblvmvidros_at_localhost__produtos;
 	var $tblvmvidros_at_localhost__users;
 	var $lstTables;
@@ -56,6 +58,8 @@ class tDAL
 	{
 		if($this->lstTables)
 			return;
+		$this->lstTables[] = array("name" => "banners", "varname" => "vmvidros_at_localhost__banners", "altvarname" => "banners", "connId" => "vmvidros_at_localhost", "schema" => "", "connName" => "vmvidros at localhost");
+		$this->lstTables[] = array("name" => "categorias", "varname" => "vmvidros_at_localhost__categorias", "altvarname" => "categorias", "connId" => "vmvidros_at_localhost", "schema" => "", "connName" => "vmvidros at localhost");
 		$this->lstTables[] = array("name" => "produtos", "varname" => "vmvidros_at_localhost__produtos", "altvarname" => "produtos", "connId" => "vmvidros_at_localhost", "schema" => "", "connName" => "vmvidros at localhost");
 		$this->lstTables[] = array("name" => "users", "varname" => "vmvidros_at_localhost__users", "altvarname" => "users", "connId" => "vmvidros_at_localhost", "schema" => "", "connName" => "vmvidros at localhost");
 	}

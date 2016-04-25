@@ -27,6 +27,8 @@ if(mlang_getcurrentlang()=="Portuguese(Brazil)")
 	$fieldToolTipsprodutos["Portuguese(Brazil)"]["titulo"] = "";
 	$fieldLabelsprodutos["Portuguese(Brazil)"]["imagem"] = "Imagem";
 	$fieldToolTipsprodutos["Portuguese(Brazil)"]["imagem"] = "";
+	$fieldLabelsprodutos["Portuguese(Brazil)"]["id_categoria"] = "Categoria";
+	$fieldToolTipsprodutos["Portuguese(Brazil)"]["id_categoria"] = "";
 	if (count($fieldToolTipsprodutos["Portuguese(Brazil)"]))
 		$tdataprodutos[".isUseToolTips"] = true;
 }
@@ -41,6 +43,8 @@ if(mlang_getcurrentlang()=="")
 	$fieldToolTipsprodutos[""]["titulo"] = "";
 	$fieldLabelsprodutos[""]["imagem"] = "Imagem";
 	$fieldToolTipsprodutos[""]["imagem"] = "";
+	$fieldLabelsprodutos[""]["id_categoria"] = "Id Categoria";
+	$fieldToolTipsprodutos[""]["id_categoria"] = "";
 	if (count($fieldToolTipsprodutos[""]))
 		$tdataprodutos[".isUseToolTips"] = true;
 }
@@ -124,6 +128,7 @@ $tdataprodutos[".filterFields"] = array();
 $tdataprodutos[".requiredSearchFields"] = array();
 
 $tdataprodutos[".allSearchFields"][] = "id";
+	$tdataprodutos[".allSearchFields"][] = "id_categoria";
 	$tdataprodutos[".allSearchFields"][] = "titulo";
 	$tdataprodutos[".allSearchFields"][] = "imagem";
 	
@@ -132,10 +137,12 @@ $tdataprodutos[".googleLikeFields"] = array();
 $tdataprodutos[".googleLikeFields"][] = "id";
 $tdataprodutos[".googleLikeFields"][] = "titulo";
 $tdataprodutos[".googleLikeFields"][] = "imagem";
+$tdataprodutos[".googleLikeFields"][] = "id_categoria";
 
 
 $tdataprodutos[".advSearchFields"] = array();
 $tdataprodutos[".advSearchFields"][] = "id";
+$tdataprodutos[".advSearchFields"][] = "id_categoria";
 $tdataprodutos[".advSearchFields"][] = "titulo";
 $tdataprodutos[".advSearchFields"][] = "imagem";
 
@@ -176,7 +183,7 @@ $tdataprodutos[".strOrderBy"] = $tstrOrderBy;
 
 $tdataprodutos[".orderindexes"] = array();
 
-$tdataprodutos[".sqlHead"] = "SELECT id,  	titulo,  	imagem";
+$tdataprodutos[".sqlHead"] = "SELECT id,  	titulo,  	imagem,  	id_categoria";
 $tdataprodutos[".sqlFrom"] = "FROM produtos";
 $tdataprodutos[".sqlWhereExpr"] = "";
 $tdataprodutos[".sqlTail"] = "";
@@ -214,6 +221,7 @@ $tdataprodutos[".Keys"] = $tableKeysprodutos;
 
 $tdataprodutos[".listFields"] = array();
 $tdataprodutos[".listFields"][] = "id";
+$tdataprodutos[".listFields"][] = "id_categoria";
 $tdataprodutos[".listFields"][] = "titulo";
 $tdataprodutos[".listFields"][] = "imagem";
 
@@ -225,12 +233,14 @@ $tdataprodutos[".viewFields"] = array();
 $tdataprodutos[".addFields"] = array();
 
 $tdataprodutos[".inlineAddFields"] = array();
+$tdataprodutos[".inlineAddFields"][] = "id_categoria";
 $tdataprodutos[".inlineAddFields"][] = "titulo";
 $tdataprodutos[".inlineAddFields"][] = "imagem";
 
 $tdataprodutos[".editFields"] = array();
 
 $tdataprodutos[".inlineEditFields"] = array();
+$tdataprodutos[".inlineEditFields"][] = "id_categoria";
 $tdataprodutos[".inlineEditFields"][] = "titulo";
 $tdataprodutos[".inlineEditFields"][] = "imagem";
 
@@ -609,6 +619,149 @@ $tdataprodutos[".printFields"] = array();
 
 	
 	$tdataprodutos["imagem"] = $fdata;
+//	id_categoria
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 4;
+	$fdata["strName"] = "id_categoria";
+	$fdata["GoodName"] = "id_categoria";
+	$fdata["ownerTable"] = "produtos";
+	$fdata["Label"] = GetFieldLabel("produtos","id_categoria"); 
+	$fdata["FieldType"] = 3;
+	
+		
+		
+		
+				
+		$fdata["bListPage"] = true; 
+	
+		
+		$fdata["bInlineAdd"] = true; 
+	
+		
+		$fdata["bInlineEdit"] = true; 
+	
+		
+		$fdata["bAdvancedSearch"] = true; 
+	
+		
+		
+		$fdata["strField"] = "id_categoria"; 
+	
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "id_categoria";
+	
+		
+		
+				$fdata["FieldPermissions"] = true;
+	
+				$fdata["UploadFolder"] = "files";
+		
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+	
+	$vdata = array("ViewFormat" => "");
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		$vdata["NeedEncode"] = true;
+	
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats 	
+	$fdata["EditFormats"] = array();
+	
+	$edata = array("EditFormat" => "Lookup wizard");
+	
+			
+	
+	
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "categorias";
+		$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+		
+		
+			
+	$edata["LinkField"] = "id";
+	$edata["LinkFieldType"] = 3;
+	$edata["DisplayField"] = "nome";
+	
+		
+	$edata["LookupOrderBy"] = "id";
+	
+		
+			
+		
+				
+	
+	
+		
+		$edata["SelectSize"] = 1;
+		
+// End Lookup Settings
+
+
+		
+		
+		
+		
+			$edata["acceptFileTypes"] = ".+$";
+	
+		$edata["maxNumberOfFiles"] = 1;
+	
+		
+		
+		
+		
+		
+		
+		$edata["controlWidth"] = 200;
+	
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+								
+		
+	//	End validation
+	
+		
+				
+		
+	
+		
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+	
+	
+	$fdata["isSeparate"] = false;
+	
+	
+	
+	
+// the field's search options settings
+		
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Equals", "More than", "Less than", "Between");
+// the end of search options settings	
+
+	
+
+	
+	$tdataprodutos["id_categoria"] = $fdata;
 
 	
 $tables_data["produtos"]=&$tdataprodutos;
@@ -641,7 +794,7 @@ function createSqlQuery_produtos()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "id,  	titulo,  	imagem";
+$proto0["m_strFieldList"] = "id,  	titulo,  	imagem,  	id_categoria";
 $proto0["m_strFrom"] = "FROM produtos";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
@@ -722,39 +875,54 @@ $proto9["m_alias"] = "";
 $obj = new SQLFieldListItem($proto9);
 
 $proto0["m_fieldlist"][]=$obj;
-$proto0["m_fromlist"] = array();
-												$proto11=array();
-$proto11["m_link"] = "SQLL_MAIN";
-			$proto12=array();
-$proto12["m_strName"] = "produtos";
-$proto12["m_srcTableName"] = "produtos";
-$proto12["m_columns"] = array();
-$proto12["m_columns"][] = "id";
-$proto12["m_columns"][] = "titulo";
-$proto12["m_columns"][] = "imagem";
-$obj = new SQLTable($proto12);
+						$proto11=array();
+			$obj = new SQLField(array(
+	"m_strName" => "id_categoria",
+	"m_strTable" => "produtos",
+	"m_srcTableName" => "produtos"
+));
 
-$proto11["m_table"] = $obj;
-$proto11["m_sql"] = "produtos";
-$proto11["m_alias"] = "";
+$proto11["m_sql"] = "id_categoria";
 $proto11["m_srcTableName"] = "produtos";
-$proto13=array();
-$proto13["m_sql"] = "";
-$proto13["m_uniontype"] = "SQLL_UNKNOWN";
+$proto11["m_expr"]=$obj;
+$proto11["m_alias"] = "";
+$obj = new SQLFieldListItem($proto11);
+
+$proto0["m_fieldlist"][]=$obj;
+$proto0["m_fromlist"] = array();
+												$proto13=array();
+$proto13["m_link"] = "SQLL_MAIN";
+			$proto14=array();
+$proto14["m_strName"] = "produtos";
+$proto14["m_srcTableName"] = "produtos";
+$proto14["m_columns"] = array();
+$proto14["m_columns"][] = "id";
+$proto14["m_columns"][] = "titulo";
+$proto14["m_columns"][] = "imagem";
+$proto14["m_columns"][] = "id_categoria";
+$obj = new SQLTable($proto14);
+
+$proto13["m_table"] = $obj;
+$proto13["m_sql"] = "produtos";
+$proto13["m_alias"] = "";
+$proto13["m_srcTableName"] = "produtos";
+$proto15=array();
+$proto15["m_sql"] = "";
+$proto15["m_uniontype"] = "SQLL_UNKNOWN";
 	$obj = new SQLNonParsed(array(
 	"m_sql" => ""
 ));
 
-$proto13["m_column"]=$obj;
-$proto13["m_contained"] = array();
-$proto13["m_strCase"] = "";
-$proto13["m_havingmode"] = false;
-$proto13["m_inBrackets"] = false;
-$proto13["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto13);
+$proto15["m_column"]=$obj;
+$proto15["m_contained"] = array();
+$proto15["m_strCase"] = "";
+$proto15["m_havingmode"] = false;
+$proto15["m_inBrackets"] = false;
+$proto15["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto15);
 
-$proto11["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto11);
+$proto13["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto13);
 
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
@@ -768,7 +936,7 @@ $queryData_produtos = createSqlQuery_produtos();
 
 
 	
-			
+				
 	
 $tdataprodutos[".sqlquery"] = $queryData_produtos;
 

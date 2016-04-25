@@ -328,6 +328,9 @@ img {
     padding-left: 18px;
     background: url(../images/bg-lista-produtos-home.png) no-repeat 0 center;
 }
+.lista-produtos-home li a.active {
+    font-weight: bold;
+}
 .lista-produtos-home ul li a:hover {
     text-decoration: underline;
 }
@@ -557,8 +560,12 @@ body#produtos .body {
 }
 
 .lista-produtos-pag-produtos {
-    width: 445px;
+    width: 600px;
     margin-top: 40px;
+}
+.lista-produtos-pag-produtos ul li {
+    float: left;
+    margin-right: 100px;
 }
 
 .imagens-produtos {

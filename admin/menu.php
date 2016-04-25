@@ -55,6 +55,10 @@ include_once(getabspath("include/users_events.php"));
 $tableEvents["users"] = new eventclass_users;
 include_once(getabspath("include/produtos_events.php"));
 $tableEvents["produtos"] = new eventclass_produtos;
+include_once(getabspath("include/categorias_events.php"));
+$tableEvents["categorias"] = new eventclass_categorias;
+include_once(getabspath("include/banners_events.php"));
+$tableEvents["banners"] = new eventclass_banners;
 
 $xt = new Xtempl();
 

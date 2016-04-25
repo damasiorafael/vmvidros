@@ -29,27 +29,15 @@
                     <div class="content-produtos pull-right">
                         <h2>Produtos <strong>& Serviços</strong></h2>
                         <ul class="lista-produtos-home">
-                            <li>
-                                <a title="Pisos elevados">Pisos elevados</a>
-                            </li>
-                            <li>
-                                <a title="Sacadas">Sacadas</a>
-                            </li>
-                            <li>
-                                <a title="Coberturas">Coberturas</a>
-                            </li>
-                            <li>
-                                <a title="Box e espelhos">Box e espelhos</a>
-                            </li>
-                            <li>
-                                <a title="Portas e Janelas">Portas e Janelas</a>
-                            </li>
-                            <li>
-                                <a title="Guarda-corpo e corrimãos">Guarda-corpo e corrimãos</a>
-                            </li>
-                            <li>
-                                <a title="Manutenção geral">Manutenção geral</a>
-                            </li>
+                            <?php
+                                    $sqlCats = "SELECT * FROM categorias ORDER BY id ASC";
+                                    $resultCats = $PDO->query($sqlCats);
+                                    while($consultaCats = $resultCats->fetch(PDO::FETCH_OBJ)){
+                                ?>
+                                        <li>
+                                            <a href="produtos.php?cat=<?php echo $consultaCats->id; ?>" title="<?php echo $consultaCats->titulo; ?>" <?php if($categoria != "" && $consultaCats->id == $categoria){ echo "class='active'"; } ?> ><?php echo $consultaCats->nome; ?></a>
+                                        </li>
+                                <?php } ?>
                         </ul>
                         <div class="botao-servicos pull-right">
                             <a href="produtos.php">Nossos Serviços</a>

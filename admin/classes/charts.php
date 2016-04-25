@@ -441,6 +441,10 @@ class Chart
 			return true;
 		if("produtos" == $this->chrt_array['tables'][0])
 			return true;
+		if("categorias" == $this->chrt_array['tables'][0])
+			return true;
+		if("banners" == $this->chrt_array['tables'][0])
+			return true;
 		return false;
 	}
 	

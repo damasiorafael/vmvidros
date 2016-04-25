@@ -2266,6 +2266,10 @@ function GetTableURL($table = "")
 		return "users";
 	if("produtos" == $table) 
 		return "produtos";
+	if("categorias" == $table) 
+		return "categorias";
+	if("banners" == $table) 
+		return "banners";
 
 	return "";
 }
@@ -2280,6 +2284,10 @@ function GetTableByShort($shortTName = "")
 		return "users";
 	if("produtos" == $shortTName) 
 		return "produtos";
+	if("categorias" == $shortTName) 
+		return "categorias";
+	if("banners" == $shortTName) 
+		return "banners";
 }
 
 //	A

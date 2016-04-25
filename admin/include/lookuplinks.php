@@ -40,6 +40,7 @@ function InitLookupLinks()
 
 	$lookupTableLinks = array();
 
+	$lookupTableLinks["categorias"]["produtos.id_categoria"]["edit"] = array("table" => "produtos", "field" => "id_categoria", "page" => "edit");
 }
 
 ?>

@@ -3,18 +3,18 @@
                 <div class="jcarousel-wrapper">
                     <div class="jcarousel" data-jcarousel="true" data-jcarouselautoscroll="true">
                         <ul>
-                            <li>
-                                <img src="images/slider/slide-1.jpg">
-                                <div class="content-link-galeria">
-                                    <a href="" class="link-galeria">Sacadas</a>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="images/slider/slide-1.jpg">
-                                <div class="content-link-galeria">
-                                    <a href="" class="link-galeria">Portas</a>
-                                </div>
-                            </li>
+                            <?php
+                                $sqlBanners = "SELECT * FROM banners ORDER BY id ASC";
+                                $resultBanners = $PDO->query($sqlBanners);
+                                while($consultaBanners = $resultBanners->fetch(PDO::FETCH_OBJ)){
+                            ?>
+                                    <li>
+                                        <img src="banners/<?php echo $consultaBanners->imagem; ?>">
+                                        <div class="content-link-galeria">
+                                            <a class="link-galeria"><?php echo utf8_encode($consultaBanners->titulo); ?></a>
+                                        </div>
+                                    </li>
+                            <?php } ?>
                         </ul>
                     </div>
                     <div class="container-setas">

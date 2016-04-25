@@ -213,7 +213,7 @@
 
 {BEGIN asearch_link}
 <li>
-	<a href="produtos_search.php" class="rnr-button link" {$advsearchlink_attrs}>Busca Avancada</a>
+	<a href="categorias_search.php" class="rnr-button link" {$advsearchlink_attrs}>Busca Avancada</a>
 </li>
 {END asearch_link}
 
@@ -303,41 +303,21 @@
 									<th class="rnr-gridfieldlabel {$id_class}">
 									{BEGIN id_fieldheader}
 																				<span {$id_orderlinkattrs}>
-											{$label produtos id}
+											{$label categorias id}
 										</span>
 									{END id_fieldheader}
 									</th>
 									{END id_fieldheadercolumn}
 
-																	{BEGIN id_categoria_fieldheadercolumn}
-									<th class="rnr-gridfieldlabel {$id_categoria_class}">
-									{BEGIN id_categoria_fieldheader}
-																				<span {$id_categoria_orderlinkattrs}>
-											{$label produtos id_categoria}
+																	{BEGIN nome_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$nome_class}">
+									{BEGIN nome_fieldheader}
+																				<span {$nome_orderlinkattrs}>
+											{$label categorias nome}
 										</span>
-									{END id_categoria_fieldheader}
+									{END nome_fieldheader}
 									</th>
-									{END id_categoria_fieldheadercolumn}
-
-																	{BEGIN titulo_fieldheadercolumn}
-									<th class="rnr-gridfieldlabel {$titulo_class}">
-									{BEGIN titulo_fieldheader}
-																				<span {$titulo_orderlinkattrs}>
-											{$label produtos titulo}
-										</span>
-									{END titulo_fieldheader}
-									</th>
-									{END titulo_fieldheadercolumn}
-
-																	{BEGIN imagem_fieldheadercolumn}
-									<th class="rnr-gridfieldlabel {$imagem_class}">
-									{BEGIN imagem_fieldheader}
-																				<span {$imagem_orderlinkattrs}>
-											{$label produtos imagem}
-										</span>
-									{END imagem_fieldheader}
-									</th>
-									{END imagem_fieldheadercolumn}
+									{END nome_fieldheadercolumn}
 
 
 									
@@ -385,23 +365,11 @@
 	</td>
 {END id_fieldcolumn}
 
-	{BEGIN id_categoria_fieldcolumn}
-	<td class="{$id_categoria_class}" {$id_categoria_style} {$recordattrs}>
-		{$id_categoria_value}
+	{BEGIN nome_fieldcolumn}
+	<td class="{$nome_class}" {$nome_style} {$recordattrs}>
+		{$nome_value}
 	</td>
-{END id_categoria_fieldcolumn}
-
-	{BEGIN titulo_fieldcolumn}
-	<td class="{$titulo_class}" {$titulo_style} {$recordattrs}>
-		{$titulo_value}
-	</td>
-{END titulo_fieldcolumn}
-
-	{BEGIN imagem_fieldcolumn}
-	<td class="{$imagem_class}" {$imagem_style} {$recordattrs}>
-		{$imagem_value}
-	</td>
-{END imagem_fieldcolumn}
+{END nome_fieldcolumn}
 
 
 									<td class="rnr-edge" {$recordattrs}>&nbsp;</td>

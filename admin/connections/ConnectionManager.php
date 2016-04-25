@@ -265,10 +265,10 @@ if($_SERVER['SERVER_NAME'] == "localhost"){
 	$sys_dbname="vmvidros_rafaeldamasio_com_br";
 } else {
 	$host="localhost";
-	$user="root";
-	$pwd="";
+	$user="vmvidros_com_br";
+	$pwd="oEIdJzDuYfTVGXA";
 	$port="";
-	$sys_dbname="vmvidros";
+	$sys_dbname="vmvidros_com_br";
 }
 $data["connInfo"][0] = $host;
 $data["connInfo"][1] = $user;
@@ -289,6 +289,8 @@ $data["connInfo"][4] = $sys_dbname;
 		$connectionsIds = array();
 		$connectionsIds["users"] = "vmvidros_at_localhost";
 		$connectionsIds["produtos"] = "vmvidros_at_localhost";
+		$connectionsIds["categorias"] = "vmvidros_at_localhost";
+		$connectionsIds["banners"] = "vmvidros_at_localhost";
 		$this->_tablesConnectionIds = $connectionsIds;
 	}
 	

@@ -1266,6 +1266,10 @@ class CrossTableReport
 			$isDB = true;
 		if("produtos" == $this->xml_array['tables'][0])
 			$isDB = true;
+		if("categorias" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("banners" == $this->xml_array['tables'][0])
+			$isDB = true;
 		return $isDB;
 	}
 	

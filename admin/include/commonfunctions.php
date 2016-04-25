@@ -264,6 +264,10 @@ function checkTableName($shortTName, $type=false)
 		return true;
 	if ("produtos" == $shortTName && ($type===false || ($type!==false && $type == 0)))
 		return true;
+	if ("categorias" == $shortTName && ($type===false || ($type!==false && $type == 0)))
+		return true;
+	if ("banners" == $shortTName && ($type===false || ($type!==false && $type == 0)))
+		return true;
 	return false;
 }
 
@@ -315,6 +319,8 @@ function GetTablesList($pdfMode = false)
 	$arr = array();
 		$arr[]="users";
 		$arr[]="produtos";
+		$arr[]="categorias";
+		$arr[]="banners";
 	return $arr;
 }
 
@@ -924,6 +930,18 @@ function GetUserPermissionsStatic( $table )
 	}
 //	default permissions	
 	if($table=="produtos")
+	{
+		// grant all by default
+		return "ADESPI".$extraPerm;	
+	}
+//	default permissions	
+	if($table=="categorias")
+	{
+		// grant all by default
+		return "ADESPI".$extraPerm;	
+	}
+//	default permissions	
+	if($table=="banners")
 	{
 		// grant all by default
 		return "ADESPI".$extraPerm;	

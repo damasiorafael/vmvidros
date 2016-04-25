@@ -438,10 +438,14 @@ $tableCaptions["Portuguese(Brazil)"][""] = "";
 $tableCaptions["Portuguese(Brazil)"]["users"] = "Users";
 $tableCaptions["Portuguese(Brazil)"][""] = "";
 $tableCaptions["Portuguese(Brazil)"]["produtos"] = "Produtos";
+$tableCaptions["Portuguese(Brazil)"]["categorias"] = "Categorias";
+$tableCaptions["Portuguese(Brazil)"]["banners"] = "Banners";
 $tableCaptions[""] = array();
 $tableCaptions[""][""] = "";
 $tableCaptions[""]["users"] = "Users";
 $tableCaptions[""]["produtos"] = "Produtos";
+$tableCaptions[""]["categorias"] = "Categorias";
+$tableCaptions[""]["banners"] = "Banners";
 
 
 $globalEvents = new class_GlobalEvents;

@@ -311,6 +311,14 @@ class AuditTrailTable
 		{
 			return false;
 		}
+		if($table=="categorias")
+		{
+			return false;
+		}
+		if($table=="banners")
+		{
+			return false;
+		}
 	}
 	
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -640,6 +648,14 @@ class AuditTrailFile
 			return false;
 		}
 		if($table=="produtos")
+		{
+			return false;
+		}
+		if($table=="categorias")
+		{
+			return false;
+		}
+		if($table=="banners")
 		{
 			return false;
 		}

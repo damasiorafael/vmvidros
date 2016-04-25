@@ -213,7 +213,7 @@
 
 {BEGIN asearch_link}
 <li>
-	<a href="produtos_search.php" class="rnr-button link" {$advsearchlink_attrs}>Busca Avancada</a>
+	<a href="banners_search.php" class="rnr-button link" {$advsearchlink_attrs}>Busca Avancada</a>
 </li>
 {END asearch_link}
 
@@ -303,27 +303,17 @@
 									<th class="rnr-gridfieldlabel {$id_class}">
 									{BEGIN id_fieldheader}
 																				<span {$id_orderlinkattrs}>
-											{$label produtos id}
+											{$label banners id}
 										</span>
 									{END id_fieldheader}
 									</th>
 									{END id_fieldheadercolumn}
 
-																	{BEGIN id_categoria_fieldheadercolumn}
-									<th class="rnr-gridfieldlabel {$id_categoria_class}">
-									{BEGIN id_categoria_fieldheader}
-																				<span {$id_categoria_orderlinkattrs}>
-											{$label produtos id_categoria}
-										</span>
-									{END id_categoria_fieldheader}
-									</th>
-									{END id_categoria_fieldheadercolumn}
-
 																	{BEGIN titulo_fieldheadercolumn}
 									<th class="rnr-gridfieldlabel {$titulo_class}">
 									{BEGIN titulo_fieldheader}
 																				<span {$titulo_orderlinkattrs}>
-											{$label produtos titulo}
+											{$label banners titulo}
 										</span>
 									{END titulo_fieldheader}
 									</th>
@@ -333,7 +323,7 @@
 									<th class="rnr-gridfieldlabel {$imagem_class}">
 									{BEGIN imagem_fieldheader}
 																				<span {$imagem_orderlinkattrs}>
-											{$label produtos imagem}
+											{$label banners imagem}
 										</span>
 									{END imagem_fieldheader}
 									</th>
@@ -384,12 +374,6 @@
 		{$id_value}
 	</td>
 {END id_fieldcolumn}
-
-	{BEGIN id_categoria_fieldcolumn}
-	<td class="{$id_categoria_class}" {$id_categoria_style} {$recordattrs}>
-		{$id_categoria_value}
-	</td>
-{END id_categoria_fieldcolumn}
 
 	{BEGIN titulo_fieldcolumn}
 	<td class="{$titulo_class}" {$titulo_style} {$recordattrs}>

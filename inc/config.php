@@ -19,9 +19,9 @@ if($_SERVER['SERVER_NAME'] == "localhost"){
 	define( 'MYSQL_DB_NAME', 'vmvidros_rafaeldamasio_com_br' );
 } else {
 	define( 'MYSQL_HOST', 'localhost' );
-	define( 'MYSQL_USER', 'root' );
-	define( 'MYSQL_PASSWORD', '' );
-	define( 'MYSQL_DB_NAME', 'vmvidros' );
+	define( 'MYSQL_USER', 'vmvidros_com_br' );
+	define( 'MYSQL_PASSWORD', 'oEIdJzDuYfTVGXA' );
+	define( 'MYSQL_DB_NAME', 'vmvidros_com_br' );
 }
 
 try{
