@@ -31,7 +31,7 @@ catch ( PDOException $e ){
 	echo 'Erro ao conectar com o MySQL: ' . $e->getMessage();
 }
 
-mysql_set_charset('utf8');
+//mysql_set_charset('utf8');
 
 function protecao($string){
 
