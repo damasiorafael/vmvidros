@@ -56,7 +56,7 @@ $mail->Password = $Password; // account password
 $mail->SetFrom("noreply@vmvidros.com.br", $destinatario);
 $mail->Subject = $Subject;
 $mail->MsgHTML($body);
-$mail->AddAddress($To);
+$mail->AddAddress("contato@vmvidros.com.br");
 $mail->AddBcc('damasio.rafael@gmail.com', 'Rafael Damasio'); // Cópia Oculta
 
 if(!$mail->Send()) {

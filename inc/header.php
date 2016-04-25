@@ -4,7 +4,7 @@
                 <div class="item-facebook-top pull-left">
                     <div class="social-info">
                         <div class="fb-like" 
-                            data-href="https://www.facebook.com/Vidra%C3%A7aria-Millenium-331204567031522" 
+                            data-href="https://www.facebook.com/profile.php?id=100008358439187" 
                             data-layout="standard" 
                             data-action="like" 
                             data-show-faces="false">
