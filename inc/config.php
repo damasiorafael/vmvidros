@@ -4,17 +4,22 @@ session_start();
 error_reporting(E_ERROR);
 
 date_default_timezone_set("Brazil/East");
-
+//vmvidros.rafaeldamasio.com.br
 if($_SERVER['SERVER_NAME'] == "localhost"){
 	$host 	= "localhost";
 	$user	= "root";
 	$pass	= "";
 	$bd		= "vmvidros";
+} else if($_SERVER['SERVER_NAME'] == "vmvidros.rafaeldamasio.com.br"){
+	$host 	= "localhost";
+	$user	= "vmvidrN3IbXYjvMZ";
+	$pass	= "cQJ2TxVFpIC3NUR";
+	$bd		= "vmvidros_rafaeldamasio_com_br";
 } else {
-	$host 	= "mysql.weblink.com.br";
-	$user	= "u174683815_joeli";
-	$pass	= "S05elVVAbq60Q7cJEW";
-	$bd		= "u174683815_joeli";
+	$host 	= "";
+	$user	= "";
+	$pass	= "";
+	$bd		= "";
 }
 
 $con = mysql_connect($host,$user,$pass);

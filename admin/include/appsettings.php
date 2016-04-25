@@ -479,7 +479,7 @@ $scriptname = getFileNameFromURL();
 
 $isGroupSecurity = false;
 
-$isUseRTEBasic = false;
+$isUseRTEBasic = true;
 
 $isUseRTECK = false;
 

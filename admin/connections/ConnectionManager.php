@@ -257,6 +257,12 @@ if($_SERVER['SERVER_NAME'] == "localhost"){
 	$pwd="";
 	$port="";
 	$sys_dbname="vmvidros";
+} else if($_SERVER['SERVER_NAME'] == "vmvidros.rafaeldamasio.com.br"){
+	$host="localhost";
+	$user="vmvidrN3IbXYjvMZ";
+	$pwd="cQJ2TxVFpIC3NUR";
+	$port="";
+	$sys_dbname="vmvidros_rafaeldamasio_com_br";
 } else {
 	$host="localhost";
 	$user="root";
