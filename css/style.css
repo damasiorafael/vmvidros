@@ -861,8 +861,8 @@ body#contato .form-envia {
         width: 400px;
     }
     
-    .lista-imagens-produtos {
-        width: 932px;
+    .lista-imagens-produtos, .imagens-produtos {
+        width: 932px!important;
     }
     .lista-imagens-produtos li:nth-child(4n) {
         margin-right: 0;
