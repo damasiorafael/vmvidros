@@ -575,9 +575,9 @@ body#produtos .body {
 }
 .lista-produtos-pag-produtos ul li {
     float: left;
-    margin-right: 100px;
-    width: 100px;
-    max-width: 100px;
+    margin-right: 50px;
+    width: 150px;
+    max-width: 150px;
 }
 
 .imagens-produtos {
