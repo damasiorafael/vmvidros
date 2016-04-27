@@ -860,4 +860,11 @@ body#contato .form-envia {
     .itens-contato, .item-contato-mapa, .item-contato-mapa .corpo-mapa {
         width: 400px;
     }
+    
+    .lista-imagens-produtos {
+        width: 932px;
+    }
+    .lista-imagens-produtos li:nth-child(4n) {
+        margin-right: 0;
+    }
 }
