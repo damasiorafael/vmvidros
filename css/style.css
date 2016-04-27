@@ -83,7 +83,7 @@ img {
     padding-left: 0;
     padding-right: 0;
 }
-@media(max-width: 1598px){
+/*@media(max-width: 1598px){
     .container.outer-container {
         width: calc(100% - 30px);
         padding-left: 15px;
@@ -96,7 +96,7 @@ img {
         padding-left: 0;
         padding-right: 0;
     }
-}
+}*/
 .container {
     width: 962px;
     max-width: 962px;
