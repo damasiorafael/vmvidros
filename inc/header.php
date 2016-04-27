@@ -4,7 +4,7 @@
                 <div class="item-facebook-top pull-left">
                     <div class="social-info">
                         <div class="fb-like" 
-                            data-href="https://www.facebook.com/profile.php?id=100008358439187" 
+                            data-href="https://www.facebook.com/Vidra%C3%A7aria-Millenium-331204567031522/" 
                             data-layout="standard" 
                             data-action="like" 
                             data-show-faces="false">
@@ -33,9 +33,7 @@
                         <div class="info-tel pull-right">
                             <span class="tel tel-1">43. <strong>3337-1818</strong></span>
                             <span class="tel tel-2">
-                                <?php if ($pag == "empresa") { ?>
-                                    <span class="icon-whatsapp"></span>
-                                <?php } ?>
+                                <span class="icon-whatsapp"></span>
                                 43. <strong>9987-1818</strong>
                             </span>
                             <span class="info-email">contato@vmvidros.com.br</span>

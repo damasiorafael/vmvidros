@@ -32,7 +32,7 @@
                                     while($consultaCats = $resultCats->fetch(PDO::FETCH_OBJ)){
                                 ?>
                                         <li>
-                                            <a href="produtos.php?cat=<?php echo $consultaCats->id; ?>" title="<?php echo $consultaCats->titulo; ?>" <?php if($categoria != "" && $consultaCats->id == $categoria){ echo "class='active'"; } ?> ><?php echo $consultaCats->nome; ?></a>
+                                            <a href="produtos.php?cat=<?php echo $consultaCats->id; ?>" title="<?php echo utf8_encode($consultaCats->nome); ?>" <?php if($categoria != "" && $consultaCats->id == $categoria){ echo "class='active'"; } ?> ><?php echo utf8_encode($consultaCats->nome); ?></a>
                                         </li>
                                 <?php } ?>
                             </ul>

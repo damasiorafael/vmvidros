@@ -22,6 +22,6 @@
                         <a href="#" class="jcarousel-control-next">&rsaquo;</a>
                     </div>
                 </div>
+                <div class="bg-vm-enfeite"></div>
             </div>
-            <div class="bg-vm-enfeite"></div>
         </div>
