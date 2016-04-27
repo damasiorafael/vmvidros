@@ -96,6 +96,13 @@ img {
     padding-left: 0;
     padding-right: 0;
 }
+@media(max-width: 998px){
+    .container {
+        width: calc(100% - 30px);
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
 
 .social-info {
     width: 83px;
