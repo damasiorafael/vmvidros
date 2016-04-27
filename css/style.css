@@ -90,18 +90,18 @@ img {
         padding-right: 15px;
     }
 }
+@media(min-width: 998px){
+    .container.outer-container {
+        width: 1572px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
 .container {
     width: 962px;
     max-width: 962px;
     padding-left: 0;
     padding-right: 0;
-}
-@media(max-width: 998px){
-    .container {
-        width: calc(100% - 30px);
-        padding-left: 15px;
-        padding-right: 15px;
-    }
 }
 
 .social-info {
