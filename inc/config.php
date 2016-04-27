@@ -5,9 +5,8 @@ session_start();
 error_reporting(E_ERROR);
 
 date_default_timezone_set("Brazil/East");
-//vmvidros.rafaeldamasio.com.break
 
-if($_SERVER['SERVER_NAME'] == "localhost"){
+if($_SERVER['SERVER_NAME'] == "localhost" || $_SERVER['SERVER_NAME'] == "192.168.0.106"){
 	define( 'MYSQL_HOST', 'localhost' );
 	define( 'MYSQL_USER', 'root' );
 	define( 'MYSQL_PASSWORD', '' );

@@ -27,18 +27,14 @@
                         </a>
                     </h1>
                 </div>
-                <?php
-                    if($pag != "contato"){
-                ?>
-                        <div class="info-tel pull-right">
-                            <span class="tel tel-1">43. <strong>3337-1818</strong></span>
-                            <span class="tel tel-2">
-                                <span class="icon-whatsapp"></span>
-                                43. <strong>9987-1818</strong>
-                            </span>
-                            <span class="info-email">contato@vmvidros.com.br</span>
-                        </div>
-                <?php } ?>
+                <div class="info-tel pull-right">
+                    <span class="tel tel-1">43. <strong>3337-1818</strong></span>
+                    <span class="tel tel-2">
+                        <span class="icon-whatsapp"></span>
+                        43. <strong>9987-1818</strong>
+                    </span>
+                    <span class="info-email">contato@vmvidros.com.br</span>
+                </div>
             </div>
         </div>
         <div class="topo-menu">
