@@ -48,7 +48,7 @@
                                 $result = $PDO->query($sql);
                                 while($consulta = $result->fetch(PDO::FETCH_OBJ)){
                             ?>
-                                    <li rel="<?php echo $consulta->id_categoria; ?>" <?php if($consulta->id_categoria != $categoria){ echo "class='noshow'"; } ?>>
+                                    <li rel="<?php echo $consulta->id_categoria; ?>" <?php if($categoria != "" && $consulta->id_categoria != $categoria){ echo "class='noshow'"; } ?>>
                                         <a
                                             href="uploads/<?php echo $consulta->imagem; ?>"
                                             <?php
