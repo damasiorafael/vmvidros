@@ -3,12 +3,16 @@
             <div class="container outer-container">
                 <div class="item-facebook-top pull-left">
                     <div class="social-info">
+                        <?php /*
                         <div class="fb-like" 
                             data-href="https://www.facebook.com/Vidra%C3%A7aria-Millenium-331204567031522/" 
                             data-layout="standard" 
                             data-action="like" 
-                            data-show-faces="false">
+                            data-show-faces="true"
+                            data-style="http://www.vmvidros.com.br/css/style.css">
                         </div>
+                        */ ?>
+                        <fb:like profile_id='331204567031522' width='600' height='100' show_faces='true' stream='false' header='false' css='http://www.vmvidros.com.br/css/style.css'></fb:like>
                     </div>
                 </div>
                 <div class="item-address-topo pull-right">

@@ -99,7 +99,7 @@ img {
 }
 
 .social-info {
-    width: 83px;
+    width: 600px;
     height: 21px;
     overflow: hidden;
     padding-left: 22px;
@@ -845,6 +845,35 @@ body#contato .form-envia {
   opacity: .70;
   display: none;
 }
+
+/*
+ * Nome: facebookcss
+ * Desenvolvido por: Rafael Damasio
+ * Data da Criação: 28-04-2016
+ * Copyright (c) 2016 Intrépido53 (http://www.intrepido53.com.br)
+ * Versão: 1.0.0
+ */
+
+/* PLUGIN FACEBOOK LIKE BOX **************************************/
+.fan_box .full_widget { background: none; border: none; margin: 0; padding: 0;}
+.fan_box .connections_grid { width: 298px; height: 330px;}
+.fan_box .connections_grid .grid_item {}
+	.fan_box .connections_grid .grid_item a img {}
+		.fan_box .connections_grid .grid_item a:hover img {}
+.fan_box .full_widget .connect_top { background: none;}
+.fan_box .full_widget .connect_top a .profileimage { display: none;}
+.fan_box .full_widget .connect_top a .img { display: none;}
+.fan_box .connections .connections_grid {}
+.fan_box .connections { height: 330px; border: none;}
+	.fan_box .connections span.total { color: #BE9945; font-size: 13px; font-family: "Trebuchet MS"; padding-left: 5px;}
+	.name_block { display: none!important;}
+
+.fan_box .connections_grid .grid_item .name { color: #FFF; font-size: 10px;}
+.fan_box .profileimage {}
+
+.connect_widget_user_action { color: #FFF; font-size: 10px;}
+.connect_widget_text { color: #FFF; font-size: 10px;}
+.hidden_elem { color: #FFF; font-size: 10px;	}
 
 
 @media(max-width: 384px){
