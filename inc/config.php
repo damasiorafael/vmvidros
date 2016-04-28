@@ -224,6 +224,11 @@ function check($valor){
 	return $tag;
 }
 
+function removeEspacos($string){
+	$string = str_replace(" ", "", $string);
+	return $string;
+}
+
 function getDatetimeNow(){
     $tz_object = new DateTimeZone('Brazil/East');
  

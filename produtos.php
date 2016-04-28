@@ -26,13 +26,16 @@
                         </p>
                         <div class="lista-produtos-pag-produtos">
                             <ul class="lista-produtos-home pull-left">
+                                <li>
+                                    <a href="#" class="showAll <?php if($categoria == ""){ echo "active"; } ?>">Mostrar Todos</a>
+                                </li>
                                 <?php
                                     $sqlCats = "SELECT * FROM categorias ORDER BY id ASC";
                                     $resultCats = $PDO->query($sqlCats);
                                     while($consultaCats = $resultCats->fetch(PDO::FETCH_OBJ)){
                                 ?>
                                         <li>
-                                            <a href="produtos.php?cat=<?php echo $consultaCats->id; ?>" title="<?php echo utf8_encode($consultaCats->nome); ?>" <?php if($categoria != "" && $consultaCats->id == $categoria){ echo "class='active'"; } ?> ><?php echo utf8_encode($consultaCats->nome); ?></a>
+                                            <a href="produtos.php?cat=<?php echo $consultaCats->id; ?>" rel="<?php echo $consultaCats->id; ?>" title="<?php echo utf8_encode($consultaCats->nome); ?>" class="showCat <?php if($categoria != "" && $consultaCats->id == $categoria){ echo "active"; } ?>" ><?php echo utf8_encode($consultaCats->nome); ?></a>
                                         </li>
                                 <?php } ?>
                             </ul>
@@ -41,15 +44,11 @@
                     <div class="content-produtos imagens-produtos">
                         <ul class="lista-imagens-produtos">
                             <?php
-                                if($categoria != ""){
-                                    $sql = "SELECT * FROM produtos WHERE id_categoria = $categoria ORDER BY id ASC";
-                                } else {
-                                    $sql = "SELECT * FROM produtos ORDER BY id ASC";
-                                }
+                                $sql = "SELECT * FROM produtos ORDER BY id ASC";
                                 $result = $PDO->query($sql);
                                 while($consulta = $result->fetch(PDO::FETCH_OBJ)){
                             ?>
-                                    <li>
+                                    <li rel="<?php echo $consulta->id_categoria; ?>" <?php if($consulta->id_categoria != $categoria){ echo "class='noshow'"; } ?>>
                                         <a
                                             href="uploads/<?php echo $consulta->imagem; ?>"
                                             <?php

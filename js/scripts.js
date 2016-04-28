@@ -173,5 +173,33 @@ $(".form-contato").on("submit", function(){
 
 });
 
+$(".showCat").on("click", function(e){
+	e.preventDefault();
+	e.stopPropagation();
+	
+	var $this = $(this);
+	var elThis = $this.attr("rel");
+	
+	$(".showCat, .showAll").removeClass("active");
+	
+	$this.addClass("active");
+	
+	$(".lista-imagens-produtos li").addClass("noshow");
+	
+	$(".lista-imagens-produtos li[rel='"+elThis+"']").removeClass("noshow");
+});
+
+$(".showAll").on("click", function(e){
+	e.preventDefault();
+	e.stopPropagation();
+	var $this = $(this);
+	
+	$(".showCat").removeClass("active");
+	
+	$this.addClass("active");
+	
+	$(".lista-imagens-produtos li").removeClass("noshow");
+});
+
 initializeMaps();
 $("[data-mask]").inputmask();
