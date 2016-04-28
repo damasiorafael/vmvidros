@@ -3,7 +3,7 @@
 header("Content-Type: text/html; charset=utf8",true);
 include_once("inc/config.php");
 
-$destinatarios	= "contato@vmvidros.com.br";
+$destinatarios	= "milleniumvidracaria@gmail.com";
 
 $destinatario 	= utf8_decode("VM Vidros");
 $usuario 		= "damasio.rafael@outlook.com";
