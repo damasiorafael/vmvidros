@@ -39,10 +39,10 @@
                                 <div class="controls">
                                     <select class="form-control" id="opcao" name="opcao">
                                         <option>ESCOLHA UMA OPÇÃO</option>
-                                        <option value="Opção 1">OPÇÃO 1</option>
-                                        <option value="Opção 2">OPÇÃO 2</option>
-                                        <option value="Opção 3">OPÇÃO 3</option>
-                                        <option value="Opção 4">OPÇÃO 4</option>
+                                        <option value="Portas e Janelas">Portas e Janelas</option>
+                                        <option value="Boxx e Espelhos">Boxx e Espelhos</option>
+                                        <option value="Projeto">Projeto</option>
+                                        <option value="Manutenção Geral">Manutenção Geral</option>
                                     </select>
                                 </div>
                             </div>

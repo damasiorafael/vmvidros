@@ -26,9 +26,6 @@
                         </p>
                         <div class="lista-produtos-pag-produtos">
                             <ul class="lista-produtos-home pull-left">
-                                <li>
-                                    <a href="#" class="showAll <?php if($categoria == ""){ echo "active"; } ?>">Mostrar Todos</a>
-                                </li>
                                 <?php
                                     $sqlCats = "SELECT * FROM categorias ORDER BY id ASC";
                                     $resultCats = $PDO->query($sqlCats);
@@ -39,6 +36,9 @@
                                         </li>
                                 <?php } ?>
                             </ul>
+                        </div>
+                        <div class="botao-servicos pull-right">
+                            <a href="#" class="showAll">galeria completa</a>
                         </div>
                     </div>
                     <div class="content-produtos imagens-produtos">
