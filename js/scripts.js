@@ -187,6 +187,9 @@ $(".showCat").on("click", function(e){
 	$(".lista-imagens-produtos li").addClass("noshow");
 	
 	$(".lista-imagens-produtos li[rel='"+elThis+"']").removeClass("noshow");
+
+	$(".lista-imagens-produtos li a").attr("data-lightbox", elThis);
+	$(".lista-imagens-produtos li[rel='"+elThis+"']").attr("data-lightbox", elThis);
 });
 
 $(".showAll").on("click", function(e){
@@ -199,6 +202,7 @@ $(".showAll").on("click", function(e){
 	$this.addClass("active");
 	
 	$(".lista-imagens-produtos li").removeClass("noshow");
+	$(".lista-imagens-produtos li a").attr("data-lightbox", "produtos");
 });
 
 initializeMaps();

@@ -319,6 +319,16 @@
 									</th>
 									{END nome_fieldheadercolumn}
 
+																	{BEGIN imagens_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$imagens_class}">
+									{BEGIN imagens_fieldheader}
+																				<span {$imagens_orderlinkattrs}>
+											{$label categorias imagens}
+										</span>
+									{END imagens_fieldheader}
+									</th>
+									{END imagens_fieldheadercolumn}
+
 
 									
 									<th class="rnr-edge">&nbsp;</th>
@@ -370,6 +380,12 @@
 		{$nome_value}
 	</td>
 {END nome_fieldcolumn}
+
+	{BEGIN imagens_fieldcolumn}
+	<td class="{$imagens_class}" {$imagens_style} {$recordattrs}>
+		{$imagens_value}
+	</td>
+{END imagens_fieldcolumn}
 
 
 									<td class="rnr-edge" {$recordattrs}>&nbsp;</td>

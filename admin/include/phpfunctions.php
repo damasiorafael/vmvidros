@@ -740,6 +740,11 @@ function fileCustomExpression($file, $data, $field, $ptype, $table="")
 	global $strTableName;
 	if(!$table)
 		$table = $strTableName;
+				if($table=="categorias" && $field=="imagens")
+	{
+		;
+		return $value;
+	}	
 	return $value;
 }
 

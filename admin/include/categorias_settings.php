@@ -25,6 +25,8 @@ if(mlang_getcurrentlang()=="Portuguese(Brazil)")
 	$fieldToolTipscategorias["Portuguese(Brazil)"]["id"] = "";
 	$fieldLabelscategorias["Portuguese(Brazil)"]["nome"] = "Nome";
 	$fieldToolTipscategorias["Portuguese(Brazil)"]["nome"] = "";
+	$fieldLabelscategorias["Portuguese(Brazil)"]["imagens"] = "Imagem";
+	$fieldToolTipscategorias["Portuguese(Brazil)"]["imagens"] = "";
 	if (count($fieldToolTipscategorias["Portuguese(Brazil)"]))
 		$tdatacategorias[".isUseToolTips"] = true;
 }
@@ -37,6 +39,8 @@ if(mlang_getcurrentlang()=="")
 	$fieldToolTipscategorias[""]["id"] = "";
 	$fieldLabelscategorias[""]["nome"] = "Nome";
 	$fieldToolTipscategorias[""]["nome"] = "";
+	$fieldLabelscategorias[""]["imagens"] = "Imagens";
+	$fieldToolTipscategorias[""]["imagens"] = "";
 	if (count($fieldToolTipscategorias[""]))
 		$tdatacategorias[".isUseToolTips"] = true;
 }
@@ -119,16 +123,19 @@ $tdatacategorias[".allSearchFields"] = array();
 $tdatacategorias[".filterFields"] = array();
 $tdatacategorias[".requiredSearchFields"] = array();
 
-$tdatacategorias[".allSearchFields"][] = "id";
+$tdatacategorias[".allSearchFields"][] = "imagens";
+	$tdatacategorias[".allSearchFields"][] = "id";
 	$tdatacategorias[".allSearchFields"][] = "nome";
 	
 
 $tdatacategorias[".googleLikeFields"] = array();
 $tdatacategorias[".googleLikeFields"][] = "id";
 $tdatacategorias[".googleLikeFields"][] = "nome";
+$tdatacategorias[".googleLikeFields"][] = "imagens";
 
 
 $tdatacategorias[".advSearchFields"] = array();
+$tdatacategorias[".advSearchFields"][] = "imagens";
 $tdatacategorias[".advSearchFields"][] = "id";
 $tdatacategorias[".advSearchFields"][] = "nome";
 
@@ -169,7 +176,7 @@ $tdatacategorias[".strOrderBy"] = $tstrOrderBy;
 
 $tdatacategorias[".orderindexes"] = array();
 
-$tdatacategorias[".sqlHead"] = "SELECT id,  	nome";
+$tdatacategorias[".sqlHead"] = "SELECT id,  	nome,  	imagens";
 $tdatacategorias[".sqlFrom"] = "FROM categorias";
 $tdatacategorias[".sqlWhereExpr"] = "";
 $tdatacategorias[".sqlTail"] = "";
@@ -208,6 +215,7 @@ $tdatacategorias[".Keys"] = $tableKeyscategorias;
 $tdatacategorias[".listFields"] = array();
 $tdatacategorias[".listFields"][] = "id";
 $tdatacategorias[".listFields"][] = "nome";
+$tdatacategorias[".listFields"][] = "imagens";
 
 $tdatacategorias[".hideMobileList"] = array();
 
@@ -218,11 +226,13 @@ $tdatacategorias[".addFields"] = array();
 
 $tdatacategorias[".inlineAddFields"] = array();
 $tdatacategorias[".inlineAddFields"][] = "nome";
+$tdatacategorias[".inlineAddFields"][] = "imagens";
 
 $tdatacategorias[".editFields"] = array();
 
 $tdatacategorias[".inlineEditFields"] = array();
 $tdatacategorias[".inlineEditFields"][] = "nome";
+$tdatacategorias[".inlineEditFields"][] = "imagens";
 
 $tdatacategorias[".exportFields"] = array();
 
@@ -471,6 +481,127 @@ $tdatacategorias[".printFields"] = array();
 
 	
 	$tdatacategorias["nome"] = $fdata;
+//	imagens
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 3;
+	$fdata["strName"] = "imagens";
+	$fdata["GoodName"] = "imagens";
+	$fdata["ownerTable"] = "categorias";
+	$fdata["Label"] = GetFieldLabel("categorias","imagens"); 
+	$fdata["FieldType"] = 200;
+	
+		
+		
+		
+				
+		$fdata["bListPage"] = true; 
+	
+		
+		$fdata["bInlineAdd"] = true; 
+	
+		
+		$fdata["bInlineEdit"] = true; 
+	
+		
+		$fdata["bAdvancedSearch"] = true; 
+	
+		
+		
+		$fdata["strField"] = "imagens"; 
+	
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "imagens";
+	
+		
+		$fdata["CompatibilityMode"] = true; 
+	
+				$fdata["FieldPermissions"] = true;
+	
+				$fdata["UploadFolder"] = "../uploads/";
+		
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+	
+	$vdata = array("ViewFormat" => "Document Download");
+	
+		
+		
+		
+								$vdata["ShowIcon"] = true; 
+			
+		
+		
+		
+		
+		
+		
+		
+		
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats 	
+	$fdata["EditFormats"] = array();
+	
+	$edata = array("EditFormat" => "Document upload");
+	
+			
+	
+	
+
+
+		$edata["IsRequired"] = true; 
+	
+		
+		
+		
+			$edata["acceptFileTypes"] = ".+$";
+	
+		$edata["maxNumberOfFiles"] = 1;
+	
+		
+		
+		
+		
+		
+		
+		$edata["controlWidth"] = 200;
+	
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+			
+		
+	//	End validation
+	
+		
+				
+		
+	
+		
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+	
+	
+	$fdata["isSeparate"] = false;
+	
+	
+	$fdata["Absolute"] = true;
+	
+	
+// the field's search options settings
+		
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Empty");
+// the end of search options settings	
+
+	
+
+	
+	$tdatacategorias["imagens"] = $fdata;
 
 	
 $tables_data["categorias"]=&$tdatacategorias;
@@ -503,7 +634,7 @@ function createSqlQuery_categorias()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "id,  	nome";
+$proto0["m_strFieldList"] = "id,  	nome,  	imagens";
 $proto0["m_strFrom"] = "FROM categorias";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
@@ -570,38 +701,53 @@ $proto7["m_alias"] = "";
 $obj = new SQLFieldListItem($proto7);
 
 $proto0["m_fieldlist"][]=$obj;
-$proto0["m_fromlist"] = array();
-												$proto9=array();
-$proto9["m_link"] = "SQLL_MAIN";
-			$proto10=array();
-$proto10["m_strName"] = "categorias";
-$proto10["m_srcTableName"] = "categorias";
-$proto10["m_columns"] = array();
-$proto10["m_columns"][] = "id";
-$proto10["m_columns"][] = "nome";
-$obj = new SQLTable($proto10);
+						$proto9=array();
+			$obj = new SQLField(array(
+	"m_strName" => "imagens",
+	"m_strTable" => "categorias",
+	"m_srcTableName" => "categorias"
+));
 
-$proto9["m_table"] = $obj;
-$proto9["m_sql"] = "categorias";
-$proto9["m_alias"] = "";
+$proto9["m_sql"] = "imagens";
 $proto9["m_srcTableName"] = "categorias";
-$proto11=array();
-$proto11["m_sql"] = "";
-$proto11["m_uniontype"] = "SQLL_UNKNOWN";
+$proto9["m_expr"]=$obj;
+$proto9["m_alias"] = "";
+$obj = new SQLFieldListItem($proto9);
+
+$proto0["m_fieldlist"][]=$obj;
+$proto0["m_fromlist"] = array();
+												$proto11=array();
+$proto11["m_link"] = "SQLL_MAIN";
+			$proto12=array();
+$proto12["m_strName"] = "categorias";
+$proto12["m_srcTableName"] = "categorias";
+$proto12["m_columns"] = array();
+$proto12["m_columns"][] = "id";
+$proto12["m_columns"][] = "nome";
+$proto12["m_columns"][] = "imagens";
+$obj = new SQLTable($proto12);
+
+$proto11["m_table"] = $obj;
+$proto11["m_sql"] = "categorias";
+$proto11["m_alias"] = "";
+$proto11["m_srcTableName"] = "categorias";
+$proto13=array();
+$proto13["m_sql"] = "";
+$proto13["m_uniontype"] = "SQLL_UNKNOWN";
 	$obj = new SQLNonParsed(array(
 	"m_sql" => ""
 ));
 
-$proto11["m_column"]=$obj;
-$proto11["m_contained"] = array();
-$proto11["m_strCase"] = "";
-$proto11["m_havingmode"] = false;
-$proto11["m_inBrackets"] = false;
-$proto11["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto11);
+$proto13["m_column"]=$obj;
+$proto13["m_contained"] = array();
+$proto13["m_strCase"] = "";
+$proto13["m_havingmode"] = false;
+$proto13["m_inBrackets"] = false;
+$proto13["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto13);
 
-$proto9["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto9);
+$proto11["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto11);
 
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
@@ -615,7 +761,7 @@ $queryData_categorias = createSqlQuery_categorias();
 
 
 	
-		
+			
 	
 $tdatacategorias[".sqlquery"] = $queryData_categorias;
 

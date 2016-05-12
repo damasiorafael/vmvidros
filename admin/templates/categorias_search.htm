@@ -54,6 +54,25 @@
 		<td>Não</td>
 		<td colspan=3>&nbsp; </td>
 	</tr>
+	<tr class="{$fielddispclass_imagens}">
+	{BEGIN imagens_fieldblock}		
+	<td>
+		{$label categorias imagens}
+	</td>
+	<td>
+		<input type="checkbox" {$imagens_notbox}>
+	</td>
+	<td>
+		{$searchtype_imagens}
+	</td>
+	<td>
+		{$imagens_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$imagens_editcontrol1}&nbsp;
+	</td>
+{END imagens_fieldblock}
+	</tr>
 	<tr class="{$fielddispclass_id}">
 	{BEGIN id_fieldblock}		
 	<td>

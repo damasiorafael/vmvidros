@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 5.6.23, for Win64 (x86_64)
+-- MySQL dump 10.16  Distrib 10.1.13-MariaDB, for debian-linux-gnu (x86_64)
 --
--- Host: 127.0.0.1    Database: vmvidros
+-- Host: localhost    Database: vmvidros_com_br
 -- ------------------------------------------------------
--- Server version	5.6.17
+-- Server version	10.1.13-MariaDB-1~trusty
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -51,7 +51,6 @@ DROP TABLE IF EXISTS `categorias`;
 CREATE TABLE `categorias` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nome` varchar(255) CHARACTER SET ujis DEFAULT NULL,
-  `imagens` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id_UNIQUE` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
@@ -63,7 +62,7 @@ CREATE TABLE `categorias` (
 
 LOCK TABLES `categorias` WRITE;
 /*!40000 ALTER TABLE `categorias` DISABLE KEYS */;
-INSERT INTO `categorias` VALUES (1,'Sacadas',NULL),(2,'Portas e Janelas',NULL),(3,'Pisos elevados',NULL),(4,'Coberturas',NULL),(5,'Box e Espelhos',NULL),(6,'Guarda-corpos e Corrimãos',NULL),(7,'Manutenção geral',NULL);
+INSERT INTO `categorias` VALUES (1,'Sacadas'),(2,'Portas e Janelas'),(3,'Pisos elevados'),(4,'Coberturas'),(5,'Box e Espelhos'),(6,'Guarda-corpos e Corrimãos'),(7,'Manutenção geral');
 /*!40000 ALTER TABLE `categorias` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -130,4 +129,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-05-12 11:04:04
+-- Dump completed on 2016-05-12 14:01:05
