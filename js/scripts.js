@@ -179,19 +179,30 @@ $(".showCat").on("click", function(e){
 	
 	var $this = $(this);
 	var elThis = $this.attr("rel");
-	
-	$(".showCat, .showAll").removeClass("active");
-	
-	$this.addClass("active");
-	
-	$(".lista-imagens-produtos li").addClass("noshow");
-	
-	$(".lista-imagens-produtos li[rel='"+elThis+"']").removeClass("noshow");
 
-	$(".lista-imagens-produtos li a").attr("data-lightbox", elThis);
-	$(".lista-imagens-produtos li[rel='"+elThis+"']").attr("data-lightbox", elThis);
+	if($this.parent().find(".lista-imagens-produtos").hasClass("show")){
+		$this.parent().find(".lista-imagens-produtos").removeClass("show");
+	} else {
+		$(".lista-imagens-produtos").removeClass("show");
+		$this.parent().find(".lista-imagens-produtos").addClass("show");
+	}
+
+	/*
+	$this.parent().find(".lista-imagens-produtos").animate({
+		height: "400px"
+	});
+	*/
+	
+	/*
+	$(".lista-imagens-produtos").animate({
+		height: "0"
+	}, 500, "linear", function(){
+		
+	});
+	*/
 });
 
+/*
 $(".showAll").on("click", function(e){
 	e.preventDefault();
 	e.stopPropagation();
@@ -204,6 +215,7 @@ $(".showAll").on("click", function(e){
 	$(".lista-imagens-produtos li").removeClass("noshow");
 	$(".lista-imagens-produtos li a").attr("data-lightbox", "produtos");
 });
+*/
 
 initializeMaps();
 $("[data-mask]").inputmask();
