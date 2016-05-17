@@ -40,7 +40,7 @@
                                         <div class="box-header with-border header-aceitos-areas">
                                             <h4 class="box-title">
                                                 <a class="setaController collapsed" aria-expanded="false" data-toggle="collapse" data-parent="#accordion" href="#area<?php echo $consultaCats->id; ?>">
-                                                    <img src="uploads/img9.jpg">
+                                                    <img src="uploads/<?php echo $consultaCats->imagens; ?>">
                                                 </a>
                                             </h4>
                                         </div>
