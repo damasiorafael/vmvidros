@@ -173,6 +173,10 @@ $(".form-contato").on("submit", function(){
 
 });
 
+$("#accordion").accordion({
+	heightStyle: "content"
+});
+
 $(".showCat").on("click", function(e){
 	e.preventDefault();
 	e.stopPropagation();
@@ -180,12 +184,25 @@ $(".showCat").on("click", function(e){
 	var $this = $(this);
 	var elThis = $this.attr("rel");
 
+	//$(this).parent().find(".lista-imagens-produtos").slideToggle("slow");
+
+	/*
 	if($this.parent().find(".lista-imagens-produtos").hasClass("show")){
 		$this.parent().find(".lista-imagens-produtos").removeClass("show");
 	} else {
 		$(".lista-imagens-produtos").removeClass("show");
 		$this.parent().find(".lista-imagens-produtos").addClass("show");
 	}
+	*/
+
+	/*
+	if($this.parent().find(".lista-imagens-produtos").hasClass("show")){
+		$this.parent().find(".lista-imagens-produtos").toggle("slow");
+	} else {
+		$(".lista-imagens-produtos").toggle("slow");
+		$this.parent().find(".lista-imagens-produtos").toggle("slow");
+	}
+	*/
 
 	/*
 	$this.parent().find(".lista-imagens-produtos").animate({

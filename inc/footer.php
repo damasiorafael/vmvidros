@@ -84,5 +84,8 @@
             }
         </script>
 
+        <!-- UI -->
+        <script type="text/javascript" src="js/jquery-ui.js"></script>
+
         <!-- Scripts -->
         <script src="js/scripts.js"></script>
