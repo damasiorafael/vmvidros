@@ -36,15 +36,19 @@
                                 while($consultaCats = $resultCats->fetch(PDO::FETCH_OBJ)){
                             ?>
                                     <!-- AREAS COLLAPSED -->
-                                    <div class="panel box box-primary panel-aceitos-menu selectedCat">
+                                    <div class="panel box box-primary panel-aceitos-menu">
                                         <div class="box-header with-border header-aceitos-areas">
                                             <h4 class="box-title">
                                                 <a class="setaController collapsed" aria-expanded="false" data-toggle="collapse" data-parent="#accordion" href="#area<?php echo $consultaCats->id; ?>">
-                                                    <img src="uploads/<?php echo $consultaCats->imagens; ?>">
+                                                    <?php if($consultaCats->imagens != ""){ ?>
+                                                        <img src="uploads/<?php echo $consultaCats->imagens; ?>">
+                                                    <?php } else { ?>
+                                                        <?php echo utf8_encode($consultaCats->nome); ?>
+                                                    <?php } ?>
                                                 </a>
                                             </h4>
                                         </div>
-                                        <div style="" aria-expanded="false" id="area<?php echo $consultaCats->id; ?>" class="panel-collapse panel-colapse-cats collapse">
+                                        <div class="panel-collapse collapse panel-colapse-cats" id="area<?php echo $consultaCats->id; ?>" aria-expanded="false" style="height: 0px;">
                                             <div class="box-body">
                                                 <ul class="nav navbar-nav navbar-aceitos-cats lista-imagens-produtos">
                                                     <?php

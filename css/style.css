@@ -949,23 +949,24 @@ body#contato .form-envia {
 }
 
 .panel-aceitos-menu {
-  background: #FFF;
+  background: #F9F9F9;
   margin-bottom: 20px;
   border-radius: 0;
-  border: 1px solid transparent;
+  border: none;
   border-bottom-color: transparent;
   float: left;
   width: 100%;
   padding-bottom: 0;
-}
-.panel-aceitos-menu:nth-child(1) {
+  box-shadow: 0!important;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
-}
-.panel-aceitos-menu:last-child {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
   border-bottom-color: transparent;
+  display: block!important;
+}
+.panel {
+    box-shadow: none!important;
 }
 
 .panel-colapse-cats {
